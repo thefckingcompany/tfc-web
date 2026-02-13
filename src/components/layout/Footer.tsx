@@ -27,6 +27,9 @@ export const Footer = () => {
                             <a href="https://www.instagram.com/thefucking.company/" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-black transition-all">
                                 <Instagram size={14} />
                             </a>
+                            <a href="tel:+34664194168" className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-black transition-all">
+                                <Phone size={14} />
+                            </a>
                         </div>
                     </div>
 
