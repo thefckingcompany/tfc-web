@@ -13,7 +13,7 @@ export const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
     const isHome = location.pathname === '/';
 
     return (
-        <div className={`flex flex-col min-h-screen font-sans selection:bg-tfc-accent selection:text-white ${isHome ? 'bg-black text-white' : 'bg-white text-black'}`}>
+        <div className={`flex flex-col min-h-[100dvh] font-sans selection:bg-tfc-accent selection:text-white ${isHome ? 'bg-black text-white' : 'bg-white text-black'}`}>
             <Navbar />
             <main className={`flex-grow ${isHome ? 'pt-0' : 'pt-24'}`}>
                 {children}
