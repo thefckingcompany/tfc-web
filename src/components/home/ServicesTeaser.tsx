@@ -31,12 +31,12 @@ const services = [
 export const ServicesTeaser = () => {
     return (
         <section className="pt-32 pb-12 bg-white text-black relative">
-            <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-8">
+            <div className="max-w-7xl mx-auto px-10 sm:px-12 lg:px-12">
 
                 {/* Header */}
                 <div className="text-center mb-20 animate-fade-in-up">
                     <p className="font-script text-4xl text-gray-500 mb-2">Calidad sobre cantidad</p>
-                    <h2 className="text-5xl md:text-6xl font-oswald font-bold uppercase tracking-tighter text-black">
+                    <h2 className="text-4xl md:text-5xl font-oswald font-bold uppercase tracking-tighter text-black">
                         Nuestros Servicios
                     </h2>
                 </div>
@@ -49,10 +49,10 @@ export const ServicesTeaser = () => {
                             className={`group border-b border-gray-200 pb-8 ${index === 4 ? 'md:col-span-2 md:w-1/2 md:mx-auto' : ''}`}
                         >
                             <div className="flex justify-between items-baseline mb-3">
-                                <h3 className="text-xl font-oswald font-bold uppercase tracking-wide group-hover:text-gray-600 transition-colors">
+                                <h3 className="text-lg font-oswald font-bold uppercase tracking-wide group-hover:text-gray-600 transition-colors">
                                     {service.title}
                                 </h3>
-                                <span className="text-xl font-bold font-oswald">{service.price}</span>
+                                <span className="text-lg font-bold font-oswald">{service.price}</span>
                             </div>
                             <p className="text-gray-500 text-sm leading-relaxed font-sans max-w-md">
                                 {service.description}

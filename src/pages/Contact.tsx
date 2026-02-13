@@ -4,12 +4,12 @@ import { MessageCircle, Instagram } from 'lucide-react';
 const Contact = () => {
     return (
         <section className="py-12 bg-white text-black min-h-screen">
-            <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-8">
+            <div className="max-w-7xl mx-auto px-10 sm:px-12 lg:px-12">
 
                 {/* Header Centered */}
                 <div className="text-center mb-12 animate-fade-in-up">
                     <p className="font-script text-4xl text-gray-500 mb-2">Visítanos</p>
-                    <h2 className="text-5xl md:text-6xl font-oswald font-bold uppercase tracking-tighter text-black">
+                    <h2 className="text-4xl md:text-5xl font-oswald font-bold uppercase tracking-tighter text-black">
                         Contacto
                     </h2>
                 </div>
@@ -34,7 +34,7 @@ const Contact = () => {
 
                         <div className="flex flex-col gap-12 mb-16">
                             <div>
-                                <h3 className="text-xl font-oswald font-bold uppercase tracking-widest mb-4 border-b-2 border-black inline-block py-1">Dirección</h3>
+                                <h3 className="text-lg font-oswald font-bold uppercase tracking-widest mb-4 border-b-2 border-black inline-block py-1">Dirección</h3>
                                 <a
                                     href="https://google.com/maps?ll=28.07699,-16.55746&z=19&t=h&hl=es&gl=ES&mapclient=embed&q=C.+Princesa+Ifara,+5+38611+San+Isidro+Santa+Cruz+de+Tenerife"
                                     target="_blank"
@@ -46,16 +46,16 @@ const Contact = () => {
                                 </a>
                             </div>
                             <div>
-                                <h3 className="text-xl font-oswald font-bold uppercase tracking-widest mb-4 border-b-2 border-black inline-block py-1">Teléfono</h3>
+                                <h3 className="text-lg font-oswald font-bold uppercase tracking-widest mb-4 border-b-2 border-black inline-block py-1">Teléfono</h3>
                                 <a
                                     href="tel:+34664194168"
-                                    className="block text-gray-600 font-sans leading-relaxed text-2xl tracking-wide font-bold hover:text-black transition-colors"
+                                    className="block text-gray-600 font-sans leading-relaxed text-xl tracking-wide font-bold hover:text-black transition-colors"
                                 >
                                     664 194 168
                                 </a>
                             </div>
                             <div>
-                                <h3 className="text-xl font-oswald font-bold uppercase tracking-widest mb-6 border-b-2 border-black inline-block py-1">Horario</h3>
+                                <h3 className="text-lg font-oswald font-bold uppercase tracking-widest mb-6 border-b-2 border-black inline-block py-1">Horario</h3>
                                 <ul className="text-gray-600 font-sans leading-relaxed space-y-4 text-base tracking-wide w-full max-w-md">
                                     <li className="flex justify-between items-center border-b border-gray-200 pb-2">
                                         <span>Lunes a Viernes</span>
