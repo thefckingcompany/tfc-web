@@ -98,11 +98,11 @@ export const Navbar = () => {
                     {/* Top Bar: Logo & Close Button */}
                     <div className="flex justify-between items-center p-6 border-b border-white/10 shrink-0">
                         {/* Logo */}
-                        <div className="flex flex-col items-start" onClick={() => setIsOpen(false)}>
-                            <span className="text-xl font-oswald font-bold tracking-tighter uppercase leading-none text-white">
+                        <div className="flex flex-col items-center" onClick={() => setIsOpen(false)}>
+                            <span className="text-2xl font-oswald font-bold tracking-tighter uppercase leading-none text-white">
                                 The Fucking
                             </span>
-                            <span className="text-sm font-oswald uppercase tracking-[0.3em] leading-none opacity-80 text-white">
+                            <span className="text-lg font-oswald uppercase tracking-[0.3em] leading-none opacity-80 text-white">
                                 Company
                             </span>
                         </div>
