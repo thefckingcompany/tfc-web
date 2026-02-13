@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { ChevronDown } from 'lucide-react';
 
 export const Hero = () => {
     return (
@@ -53,8 +54,9 @@ export const Hero = () => {
             </div>
 
             {/* Scroll Indicator */}
-            <div className="absolute bottom-32 left-1/2 transform -translate-x-1/2 text-white animate-bounce opacity-50">
+            <div className="absolute bottom-32 left-1/2 transform -translate-x-1/2 text-white animate-bounce opacity-50 flex flex-col items-center">
                 <span className="text-xs uppercase tracking-widest">Scroll</span>
+                <ChevronDown className="mt-2" size={24} />
             </div>
         </div>
     );
