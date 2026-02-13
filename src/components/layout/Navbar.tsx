@@ -28,7 +28,7 @@ export const Navbar = () => {
     // Actually, easiest for "Classic Premium" is always black on white for inner pages, 
     // and transparent->black for Home.
 
-    const isDarkBg = isHome && !scrolled;
+    const isDarkBg = (isHome && !scrolled) || isOpen; // Force dark mode on header when menu is open
     const textColorClass = isDarkBg ? 'text-white' : 'text-black';
     const bgClass = isDarkBg ? 'bg-transparent border-transparent' : 'bg-white/95 backdrop-blur-md border-gray-200 shadow-sm';
     const buttonClass = isDarkBg
@@ -85,26 +85,30 @@ export const Navbar = () => {
 
             {/* Mobile Dropdown */}
             {isOpen && (
-                <div className="md:hidden bg-white border-b border-gray-200 absolute w-full h-screen">
-                    <div className="px-4 pt-10 pb-6 space-y-4 flex flex-col items-center">
-                        {navLinks.map((link) => (
-                            <Link
-                                key={link.name}
-                                to={link.path}
-                                onClick={() => setIsOpen(false)}
-                                className="block px-3 py-3 text-2xl font-oswald font-bold tracking-wider text-black hover:text-gray-600"
-                            >
-                                {link.name}
-                            </Link>
-                        ))}
+                <div className="md:hidden bg-black text-white fixed inset-0 top-0 z-40 flex flex-col items-center justify-center space-y-8 animate-fade-in">
+                    {/* Close Button specific for the overlay if needed, but the main one works if z-index is managed. 
+                        However, usually easier to have the full overlay cover everything and put a close button inside or keep header on top.
+                        Let's keep header on top (z-50) and this menu at z-40.
+                        But we need to ensure header text is white when menu is open.
+                    */}
+
+                    {navLinks.map((link) => (
                         <Link
-                            to="/reservar"
+                            key={link.name}
+                            to={link.path}
                             onClick={() => setIsOpen(false)}
-                            className="mt-8 px-10 py-4 bg-black text-white font-oswald font-bold tracking-wider uppercase"
+                            className="text-3xl font-oswald font-bold tracking-widest text-white hover:text-gray-400 uppercase"
                         >
-                            Reservar Cita
+                            {link.name}
                         </Link>
-                    </div>
+                    ))}
+                    <Link
+                        to="/reservar"
+                        onClick={() => setIsOpen(false)}
+                        className="mt-10 px-12 py-4 bg-white text-black font-oswald font-bold tracking-widest uppercase hover:bg-gray-200 transition-colors"
+                    >
+                        Reservar Cita
+                    </Link>
                 </div>
             )}
         </nav>
