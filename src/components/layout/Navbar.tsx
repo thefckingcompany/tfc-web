@@ -28,13 +28,12 @@ export const Navbar = () => {
     // Actually, easiest for "Classic Premium" is always black on white for inner pages, 
     // and transparent->black for Home.
 
-    const isDarkBg = (isHome && !scrolled) || isOpen;
+    const isDarkBg = isHome && !scrolled;
     const textColorClass = isDarkBg ? 'text-white' : 'text-black';
 
-    // Fix: When menu is open, force background to black to avoid seeing content underneath through transparency
-    const bgClass = isOpen
+    const bgClass = isDarkBg
         ? 'bg-transparent border-transparent'
-        : (isDarkBg ? 'bg-transparent border-transparent' : 'bg-white/95 backdrop-blur-md border-gray-200 shadow-sm');
+        : 'bg-white/95 backdrop-blur-md border-gray-200 shadow-sm';
 
     const buttonClass = isDarkBg
         ? 'bg-white text-black hover:bg-gray-200'
