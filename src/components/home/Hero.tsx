@@ -20,7 +20,7 @@ export const Hero = () => {
                 {/* Main Title Stack */}
                 <h1 className="text-4xl sm:text-5xl md:text-8xl lg:text-9xl font-oswald font-bold text-white leading-none tracking-tighter mb-2 uppercase">
                     The Fucking<br />
-                    <span className="block mt-[-10px]">Company</span>
+                    <span className="block mt-0 md:mt-[-10px]">Company</span>
                 </h1>
 
                 {/* Script Subtitle */}
