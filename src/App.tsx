@@ -1,0 +1,31 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { MainLayout } from './components/layout/MainLayout';
+import ScrollToTop from './components/layout/ScrollToTop';
+import Home from './pages/Home';
+import Services from './pages/Services';
+import Booking from './pages/Booking';
+import Team from './pages/Team';
+import Contact from './pages/Contact';
+
+import Gallery from './pages/Gallery';
+
+function App() {
+  return (
+    <Router>
+      <ScrollToTop />
+      <MainLayout>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/servicios" element={<Services />} />
+          <Route path="/reservar" element={<Booking />} />
+          <Route path="/equipo" element={<Team />} />
+          <Route path="/galeria" element={<Gallery />} />
+          <Route path="/blog" element={<div className="min-h-[60vh] flex items-center justify-center text-4xl font-oswald text-white">BLOG (Próximamente)</div>} />
+          <Route path="/contacto" element={<Contact />} />
+        </Routes>
+      </MainLayout>
+    </Router>
+  )
+}
+
+export default App
