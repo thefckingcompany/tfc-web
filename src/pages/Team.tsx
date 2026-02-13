@@ -50,10 +50,10 @@ const team = [
 
 const Team = () => {
     return (
-        <div className="min-h-screen bg-white text-black py-12 px-4 sm:px-6 lg:px-8">
+        <div className="min-h-screen bg-white text-black py-12 px-10 sm:px-8 lg:px-8">
             <div className="text-center mb-12 pt-0">
-                <p className="font-script text-4xl text-gray-500 mb-2">El Talento</p>
-                <h1 className="text-5xl md:text-7xl font-oswald font-bold uppercase tracking-tighter mb-6">
+                <p className="font-script text-2xl text-gray-500 mb-2">El Talento</p>
+                <h1 className="text-3xl sm:text-4xl md:text-7xl font-oswald font-bold uppercase tracking-tighter mb-6">
                     Conoce al Equipo
                 </h1>
                 <div className="w-16 h-[1px] bg-black mx-auto"></div>
@@ -63,7 +63,7 @@ const Team = () => {
                 {team.map((member) => (
                     <div key={member.name} className="flex flex-col shadow-sm hover:shadow-xl transition-shadow duration-300">
                         {/* Image */}
-                        <div className="aspect-square overflow-hidden relative">
+                        <div className="h-64 sm:h-[500px] overflow-hidden relative">
                             <img
                                 src={member.image}
                                 alt={member.name}
