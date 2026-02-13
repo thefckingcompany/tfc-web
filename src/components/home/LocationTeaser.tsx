@@ -17,9 +17,19 @@ export const LocationTeaser = () => {
 
                     {/* Dirección */}
                     <div className="group border-b border-gray-200 pb-8">
-                        <h3 className="text-xl font-oswald font-bold uppercase tracking-wide group-hover:text-gray-600 transition-colors mb-3">
-                            Dirección
-                        </h3>
+                        <div className="flex justify-between items-baseline mb-3">
+                            <h3 className="text-xl font-oswald font-bold uppercase tracking-wide group-hover:text-gray-600 transition-colors">
+                                Dirección
+                            </h3>
+                            <a
+                                href="https://www.google.com/maps/search/?api=1&query=Calle+Princesa+Ifara,+Local+5,+38611+San+Isidro"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-xl font-bold font-oswald hover:text-gray-600 transition-colors uppercase"
+                            >
+                                VER MAPA
+                            </a>
+                        </div>
                         <p className="text-gray-500 text-base leading-relaxed font-sans">
                             Calle Princesa Ifara, Local 5<br />
                             38611 Granadilla de Abona (Canarias)
