@@ -49,10 +49,10 @@ export const ServicesTeaser = () => {
                             className={`group border-b border-gray-200 pb-8 ${index === 4 ? 'md:col-span-2 md:w-1/2 md:mx-auto' : ''}`}
                         >
                             <div className="flex justify-between items-baseline mb-3">
-                                <h3 className="text-xl font-oswald font-bold uppercase tracking-wide group-hover:text-gray-600 transition-colors">
+                                <h3 className="text-base md:text-xl font-oswald font-bold uppercase tracking-wide group-hover:text-gray-600 transition-colors">
                                     {service.title}
                                 </h3>
-                                <span className="text-xl font-bold font-oswald">{service.price}</span>
+                                <span className="text-base md:text-xl font-bold font-oswald">{service.price}</span>
                             </div>
                             <p className="text-gray-500 text-sm leading-relaxed font-sans max-w-md">
                                 {service.description}
