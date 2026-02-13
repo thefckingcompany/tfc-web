@@ -15,7 +15,7 @@ const categories = [
 
 const Services = () => {
     return (
-        <div className="bg-white text-black pt-12 pb-20 px-4 sm:px-6 lg:px-8">
+        <div className="bg-white text-black pt-12 pb-20 px-8 sm:px-8 lg:px-8">
 
             {/* Header */}
             <div className="text-center mb-8 pt-0">
