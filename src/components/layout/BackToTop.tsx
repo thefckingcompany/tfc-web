@@ -60,7 +60,6 @@ export const BackToTop = () => {
                         strokeDasharray={circumference}
                         strokeDashoffset={strokeDashoffset}
                         strokeLinecap="round"
-                        className="transition-all duration-100 ease-out"
                     />
                 </svg>
                 <ChevronUp className="w-5 h-5" />
