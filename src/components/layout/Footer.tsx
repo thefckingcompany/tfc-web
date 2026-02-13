@@ -10,7 +10,7 @@ export const Footer = () => {
                     {/* Brand */}
                     <div className="space-y-6">
                         <div>
-                            <h2 className="text-3xl font-oswald font-bold uppercase tracking-tighter leading-none mb-1">
+                            <h2 className="text-2xl font-oswald font-bold uppercase tracking-tighter leading-none mb-1">
                                 The Fucking
                             </h2>
                             <h2 className="text-xl font-oswald uppercase tracking-[0.3em] leading-none opacity-70">

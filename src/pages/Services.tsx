@@ -19,8 +19,8 @@ const Services = () => {
 
             {/* Header */}
             <div className="text-center mb-8 pt-0">
-                <p className="font-script text-4xl text-gray-400 mb-2">Precios Transparentes</p>
-                <h1 className="text-5xl md:text-7xl font-oswald font-bold uppercase tracking-tighter mb-6">
+                <p className="font-script text-3xl text-gray-400 mb-2">Precios Transparentes</p>
+                <h1 className="text-4xl md:text-7xl font-oswald font-bold uppercase tracking-tighter mb-6">
                     Carta de Servicios
                 </h1>
                 <div className="w-16 h-[1px] bg-black mx-auto"></div>

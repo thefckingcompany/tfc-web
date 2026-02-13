@@ -42,7 +42,7 @@ export const Navbar = () => {
 
     return (
         <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 border-b ${bgClass}`}>
-            <div className="max-w-7xl mx-auto px-8 sm:px-12 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-24">
 
                     {/* Logo */}
@@ -96,7 +96,7 @@ export const Navbar = () => {
                 >
 
                     {/* Top Bar: Logo & Close Button */}
-                    <div className="flex justify-between items-center p-8 border-b border-white/10 shrink-0">
+                    <div className="flex justify-between items-center p-6 border-b border-white/10 shrink-0">
                         {/* Logo */}
                         <div className="flex flex-col items-center" onClick={() => setIsOpen(false)}>
                             <span className="text-2xl font-oswald font-bold tracking-tighter uppercase leading-none text-white">
