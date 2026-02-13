@@ -15,12 +15,12 @@ const categories = [
 
 const Services = () => {
     return (
-        <div className="bg-white text-black pt-12 pb-20 px-8 sm:px-8 lg:px-8">
+        <div className="bg-white text-black pt-12 pb-20 px-10 sm:px-8 lg:px-8">
 
             {/* Header */}
             <div className="text-center mb-8 pt-0">
-                <p className="font-script text-3xl text-gray-400 mb-2">Precios Transparentes</p>
-                <h1 className="text-4xl md:text-7xl font-oswald font-bold uppercase tracking-tighter mb-6">
+                <p className="font-script text-2xl text-gray-400 mb-2">Precios Transparentes</p>
+                <h1 className="text-3xl sm:text-4xl md:text-7xl font-oswald font-bold uppercase tracking-tighter mb-6">
                     Carta de Servicios
                 </h1>
                 <div className="w-16 h-[1px] bg-black mx-auto"></div>
@@ -33,13 +33,13 @@ const Services = () => {
                         {categories[0].items.map((item) => (
                             <div key={item.name} className="flex flex-col sm:flex-row justify-between items-baseline group py-6 border-b border-gray-100 last:border-0 hover:bg-gray-50 transition-colors px-4 rounded-lg">
                                 <div className="flex-1 pr-8">
-                                    <h3 className="text-2xl font-oswald font-bold text-black uppercase tracking-wide">
+                                    <h3 className="text-xl md:text-2xl font-oswald font-bold text-black uppercase tracking-wide">
                                         {item.name}
                                     </h3>
                                     <p className="text-base text-gray-500 mt-2 font-sans">{item.desc}</p>
                                 </div>
                                 <div className="w-full sm:w-auto mt-4 sm:mt-0 flex-none">
-                                    <span className="text-2xl font-bold font-oswald text-black whitespace-nowrap">
+                                    <span className="text-xl font-bold font-oswald text-black whitespace-nowrap">
                                         {item.price}
                                     </span>
                                 </div>
