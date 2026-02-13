@@ -31,39 +31,5 @@ export const BackToTop = () => {
     const circumference = 2 * Math.PI * radius;
     const strokeDashoffset = circumference - (progress / 100) * circumference;
 
-    return (
-        <button
-            onClick={scrollToTop}
-            className={`fixed bottom-8 right-8 z-50 p-2 rounded-full bg-white text-black shadow-lg transition-all duration-500 transform hover:scale-110 group ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'
-                }`}
-            aria-label="Volver arriba"
-        >
-            <div className="relative flex items-center justify-center w-10 h-10">
-                {/* Background Circle */}
-                <svg className="absolute w-full h-full -rotate-90">
-                    <circle
-                        cx="20"
-                        cy="20"
-                        r={radius}
-                        fill="none"
-                        stroke="#e5e7eb"
-                        strokeWidth="2"
-                    />
-                    {/* Progress Circle */}
-                    <circle
-                        cx="20"
-                        cy="20"
-                        r={radius}
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeDasharray={circumference}
-                        strokeDashoffset={strokeDashoffset}
-                        strokeLinecap="round"
-                    />
-                </svg>
-                <ChevronUp className="w-5 h-5" />
-            </div>
-        </button>
-    );
+    return null;
 };
