@@ -33,7 +33,7 @@ export const Navbar = () => {
 
     // Fix: When menu is open, force background to black to avoid seeing content underneath through transparency
     const bgClass = isOpen
-        ? 'bg-black border-transparent'
+        ? 'bg-transparent border-transparent'
         : (isDarkBg ? 'bg-transparent border-transparent' : 'bg-white/95 backdrop-blur-md border-gray-200 shadow-sm');
 
     const buttonClass = isDarkBg
