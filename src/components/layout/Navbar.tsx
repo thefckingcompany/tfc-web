@@ -90,7 +90,7 @@ export const Navbar = () => {
 
             {/* Mobile Dropdown Overlay */}
             {isOpen && (
-                <div className="md:hidden fixed inset-0 z-[60] bg-black text-white flex flex-col animate-fade-in">
+                <div className="md:hidden fixed inset-0 z-[100] bg-black text-white flex flex-col">
 
                     {/* Top Bar: Logo & Close Button */}
                     <div className="flex justify-between items-center p-6 border-b border-white/10">
