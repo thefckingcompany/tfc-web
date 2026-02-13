@@ -33,6 +33,11 @@ export const BookingWizard = () => {
         }
     }, [searchParams]);
 
+    // Scroll to top on step change
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, [step]);
+
     const handleBarberSelect = (barber: Barber) => {
         setBooking((prev: BookingState) => ({ ...prev, barber }));
         setTimeout(() => setStep(2), 300);

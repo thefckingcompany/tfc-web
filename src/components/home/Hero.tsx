@@ -15,16 +15,16 @@ export const Hero = () => {
             </div>
 
             {/* Content */}
-            <div className="relative z-10 text-center px-8 max-w-5xl mx-auto flex flex-col items-center">
+            <div className="relative z-10 text-center px-6 max-w-5xl mx-auto flex flex-col items-center">
 
                 {/* Main Title Stack */}
-                <h1 className="text-5xl md:text-8xl lg:text-9xl font-oswald font-bold text-white leading-none tracking-tighter mb-2 uppercase">
+                <h1 className="text-6xl md:text-8xl lg:text-9xl font-oswald font-bold text-white leading-none tracking-tighter mb-2 uppercase">
                     The Fucking<br />
                     <span className="block mt-[-10px]">Company</span>
                 </h1>
 
                 {/* Script Subtitle */}
-                <h2 className="text-3xl md:text-6xl font-script text-white mb-6 transform -rotate-2">
+                <h2 className="text-4xl md:text-6xl font-script text-white mb-6 transform -rotate-2">
                     Barber Shop
                 </h2>
 

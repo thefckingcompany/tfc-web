@@ -31,12 +31,12 @@ const services = [
 export const ServicesTeaser = () => {
     return (
         <section className="pt-32 pb-12 bg-white text-black relative">
-            <div className="max-w-6xl mx-auto px-8 sm:px-8 lg:px-8">
+            <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-8">
 
                 {/* Header */}
                 <div className="text-center mb-20 animate-fade-in-up">
-                    <p className="font-script text-3xl text-gray-500 mb-2">Calidad sobre cantidad</p>
-                    <h2 className="text-4xl md:text-6xl font-oswald font-bold uppercase tracking-tighter text-black">
+                    <p className="font-script text-4xl text-gray-500 mb-2">Calidad sobre cantidad</p>
+                    <h2 className="text-5xl md:text-6xl font-oswald font-bold uppercase tracking-tighter text-black">
                         Nuestros Servicios
                     </h2>
                 </div>
