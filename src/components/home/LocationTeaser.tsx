@@ -22,7 +22,7 @@ export const LocationTeaser = () => {
                                 Dirección
                             </h3>
                             <a
-                                href="https://www.google.com/maps/search/?api=1&query=Calle+Princesa+Ifara,+Local+5,+38611+San+Isidro"
+                                href="https://google.com/maps?ll=28.07699,-16.55746&z=19&t=h&hl=es&gl=ES&mapclient=embed&q=C.+Princesa+Ifara,+5+38611+San+Isidro+Santa+Cruz+de+Tenerife"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-xl font-bold font-oswald hover:text-gray-600 transition-colors uppercase"
