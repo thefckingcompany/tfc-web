@@ -90,10 +90,13 @@ export const Navbar = () => {
 
             {/* Mobile Dropdown Overlay */}
             {isOpen && (
-                <div className="md:hidden fixed inset-0 z-[100] bg-black text-white flex flex-col">
+                <div
+                    style={{ backgroundColor: '#000000' }}
+                    className="md:hidden fixed top-0 left-0 w-full h-full z-[100] text-white flex flex-col overscroll-none"
+                >
 
                     {/* Top Bar: Logo & Close Button */}
-                    <div className="flex justify-between items-center p-6 border-b border-white/10">
+                    <div className="flex justify-between items-center p-6 border-b border-white/10 shrink-0">
                         {/* Logo */}
                         <div className="flex flex-col items-start" onClick={() => setIsOpen(false)}>
                             <span className="text-xl font-oswald font-bold tracking-tighter uppercase leading-none text-white">
@@ -114,7 +117,7 @@ export const Navbar = () => {
                     </div>
 
                     {/* Navigation Links */}
-                    <div className="flex-grow flex flex-col items-center justify-center space-y-6">
+                    <div className="flex-grow flex flex-col items-center justify-center space-y-6 overflow-y-auto">
                         {navLinks.map((link) => (
                             <Link
                                 key={link.name}
@@ -135,7 +138,7 @@ export const Navbar = () => {
                     </div>
 
                     {/* Social Media Footer */}
-                    <div className="pb-10 flex justify-center gap-8">
+                    <div className="pb-10 flex justify-center gap-8 shrink-0">
                         <a
                             href="https://wa.me/34664194168"
                             target="_blank"
