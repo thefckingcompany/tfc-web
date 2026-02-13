@@ -12,6 +12,12 @@ export const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
     const location = useLocation();
     const isHome = location.pathname === '/';
 
+    React.useEffect(() => {
+        const color = isHome ? '#000000' : '#ffffff';
+        document.documentElement.style.backgroundColor = color;
+        document.body.style.backgroundColor = color;
+    }, [isHome]);
+
     return (
         <div className={`flex flex-col min-h-[100dvh] font-sans selection:bg-tfc-accent selection:text-white ${isHome ? 'bg-black text-white' : 'bg-white text-black'}`}>
             <Navbar />
