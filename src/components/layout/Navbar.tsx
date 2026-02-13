@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Instagram, MessageCircle } from 'lucide-react';
+import { Menu, X, Instagram, MessageCircle, Phone } from 'lucide-react';
 
 const navLinks = [
     { name: 'INICIO', path: '/' },
@@ -154,6 +154,12 @@ export const Navbar = () => {
                             className="text-white hover:text-pink-400 transition-colors"
                         >
                             <Instagram size={32} />
+                        </a>
+                        <a
+                            href="tel:+34664194168"
+                            className="text-white hover:text-blue-400 transition-colors"
+                        >
+                            <Phone size={32} />
                         </a>
                     </div>
                 </div>,
