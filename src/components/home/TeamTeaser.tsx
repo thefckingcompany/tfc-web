@@ -14,7 +14,7 @@ export const TeamTeaser = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
                 {/* Header */}
-                <div className="text-center mb-20 animate-fade-in-up">
+                <div className="text-center mb-10 animate-fade-in-up">
                     <p className="font-script text-4xl text-gray-500 mb-2">Maestros Artesanos</p>
                     <h2 className="text-5xl md:text-6xl font-oswald font-bold uppercase tracking-tighter text-black">
                         Conoce al Equipo
