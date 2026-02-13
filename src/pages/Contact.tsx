@@ -35,16 +35,24 @@ const Contact = () => {
                         <div className="flex flex-col gap-12 mb-16">
                             <div>
                                 <h3 className="text-xl font-oswald font-bold uppercase tracking-widest mb-4 border-b-2 border-black inline-block py-1">Dirección</h3>
-                                <p className="text-gray-600 font-sans leading-relaxed text-lg tracking-wide">
+                                <a
+                                    href="https://google.com/maps?ll=28.07699,-16.55746&z=19&t=h&hl=es&gl=ES&mapclient=embed&q=C.+Princesa+Ifara,+5+38611+San+Isidro+Santa+Cruz+de+Tenerife"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="block text-gray-600 font-sans leading-relaxed text-lg tracking-wide hover:text-black transition-colors"
+                                >
                                     Calle Princesa Ifara, Local 5<br />
                                     38611 Granadilla de Abona (Canarias)
-                                </p>
+                                </a>
                             </div>
                             <div>
                                 <h3 className="text-xl font-oswald font-bold uppercase tracking-widest mb-4 border-b-2 border-black inline-block py-1">Teléfono</h3>
-                                <p className="text-gray-600 font-sans leading-relaxed text-2xl tracking-wide font-bold">
+                                <a
+                                    href="tel:+34664194168"
+                                    className="block text-gray-600 font-sans leading-relaxed text-2xl tracking-wide font-bold hover:text-black transition-colors"
+                                >
                                     664 194 168
-                                </p>
+                                </a>
                             </div>
                             <div>
                                 <h3 className="text-xl font-oswald font-bold uppercase tracking-widest mb-6 border-b-2 border-black inline-block py-1">Horario</h3>
