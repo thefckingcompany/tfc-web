@@ -8,7 +8,7 @@ export const Hero = () => {
                 <img
                     src="/hero-bg.png" // Replace with your actual hero image
                     alt="Barbershop Atmosphere"
-                    className="w-full h-full object-cover brightness-[0.5]"
+                    className="w-full h-full object-cover object-bottom brightness-[0.5]"
                 />
                 <div className="absolute inset-0 bg-black/20"></div>
             </div>
