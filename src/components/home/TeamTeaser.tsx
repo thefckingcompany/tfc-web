@@ -26,7 +26,7 @@ export const TeamTeaser = () => {
                     {barbers.map((barber) => (
                         <div
                             key={barber.name}
-                            className="group relative h-[500px] overflow-hidden block"
+                            className="group relative h-64 sm:h-[500px] overflow-hidden block"
                         >
                             <img
                                 src={barber.img}
