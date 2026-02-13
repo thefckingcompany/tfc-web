@@ -31,7 +31,7 @@ const services = [
 export const ServicesTeaser = () => {
     return (
         <section className="pt-32 pb-12 bg-white text-black relative">
-            <div className="max-w-6xl mx-auto px-8 sm:px-8 lg:px-8">
+            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
                 {/* Header */}
                 <div className="text-center mb-20 animate-fade-in-up">
@@ -46,7 +46,7 @@ export const ServicesTeaser = () => {
                     {services.map((service, index) => (
                         <div
                             key={index}
-                            className={`group border-b border-gray-200 pb-8 ${index === 4 ? 'md:col-span-2 md:w-1/2 md:mx-auto' : ''}`}
+                            className={`group border-b border-gray-200 pb-8 px-4 ${index === 4 ? 'md:col-span-2 md:w-1/2 md:mx-auto' : ''}`}
                         >
                             <div className="flex justify-between items-baseline mb-3">
                                 <h3 className="text-xl font-oswald font-bold uppercase tracking-wide group-hover:text-gray-600 transition-colors">
