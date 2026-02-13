@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Instagram, MessageCircle } from 'lucide-react';
 
 const navLinks = [
     { name: 'INICIO', path: '/' },
@@ -83,32 +83,71 @@ export const Navbar = () => {
                 </div>
             </div>
 
-            {/* Mobile Dropdown */}
+            {/* Mobile Dropdown Overlay */}
             {isOpen && (
-                <div className="md:hidden bg-black text-white fixed inset-0 top-0 z-40 flex flex-col items-center justify-center space-y-8 animate-fade-in">
-                    {/* Close Button specific for the overlay if needed, but the main one works if z-index is managed. 
-                        However, usually easier to have the full overlay cover everything and put a close button inside or keep header on top.
-                        Let's keep header on top (z-50) and this menu at z-40.
-                        But we need to ensure header text is white when menu is open.
-                    */}
+                <div className="md:hidden fixed inset-0 z-[60] bg-black text-white flex flex-col animate-fade-in">
 
-                    {navLinks.map((link) => (
-                        <Link
-                            key={link.name}
-                            to={link.path}
+                    {/* Top Bar: Logo & Close Button */}
+                    <div className="flex justify-between items-center p-6 border-b border-white/10">
+                        {/* Logo */}
+                        <div className="flex flex-col items-start" onClick={() => setIsOpen(false)}>
+                            <span className="text-xl font-oswald font-bold tracking-tighter uppercase leading-none text-white">
+                                The Fucking
+                            </span>
+                            <span className="text-sm font-oswald uppercase tracking-[0.3em] leading-none opacity-80 text-white">
+                                Company
+                            </span>
+                        </div>
+
+                        {/* Close Button */}
+                        <button
                             onClick={() => setIsOpen(false)}
-                            className="text-3xl font-oswald font-bold tracking-widest text-white hover:text-gray-400 uppercase"
+                            className="p-2 text-white hover:text-gray-400 transition-colors"
                         >
-                            {link.name}
+                            <X size={32} />
+                        </button>
+                    </div>
+
+                    {/* Navigation Links */}
+                    <div className="flex-grow flex flex-col items-center justify-center space-y-6">
+                        {navLinks.map((link) => (
+                            <Link
+                                key={link.name}
+                                to={link.path}
+                                onClick={() => setIsOpen(false)}
+                                className="text-3xl font-oswald font-bold tracking-widest text-white hover:text-gray-400 uppercase transition-colors"
+                            >
+                                {link.name}
+                            </Link>
+                        ))}
+                        <Link
+                            to="/reservar"
+                            onClick={() => setIsOpen(false)}
+                            className="mt-8 px-12 py-4 bg-white text-black font-oswald font-bold tracking-widest uppercase hover:bg-gray-200 transition-colors"
+                        >
+                            Reservar Cita
                         </Link>
-                    ))}
-                    <Link
-                        to="/reservar"
-                        onClick={() => setIsOpen(false)}
-                        className="mt-10 px-12 py-4 bg-white text-black font-oswald font-bold tracking-widest uppercase hover:bg-gray-200 transition-colors"
-                    >
-                        Reservar Cita
-                    </Link>
+                    </div>
+
+                    {/* Social Media Footer */}
+                    <div className="pb-10 flex justify-center gap-8">
+                        <a
+                            href="https://wa.me/34664194168"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-white hover:text-green-400 transition-colors"
+                        >
+                            <MessageCircle size={32} />
+                        </a>
+                        <a
+                            href="https://www.instagram.com/thefucking.company/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-white hover:text-pink-400 transition-colors"
+                        >
+                            <Instagram size={32} />
+                        </a>
+                    </div>
                 </div>
             )}
         </nav>
