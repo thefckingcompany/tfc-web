@@ -19,7 +19,7 @@ export const StepBarber: React.FC<StepBarberProps> = ({ selectedBarber, onSelect
                         key={barber.id}
                         onClick={() => onSelect(barber)}
                         className={cn(
-                            "group relative overflow-hidden h-96 w-full text-left transition-all",
+                            "group relative overflow-hidden h-64 sm:h-96 w-full text-left transition-all",
                             selectedBarber?.id === barber.id
                                 ? "ring-2 ring-black grayscale-0"
                                 : "grayscale hover:grayscale-0 opacity-80 hover:opacity-100"
