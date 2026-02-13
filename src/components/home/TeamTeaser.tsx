@@ -11,7 +11,7 @@ const barbers = [
 export const TeamTeaser = () => {
     return (
         <section className="pt-12 pb-24 bg-white relative">
-            <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-8">
+            <div className="max-w-7xl mx-auto px-8 sm:px-8 lg:px-8">
 
                 {/* Header */}
                 <div className="text-center mb-10 animate-fade-in-up">

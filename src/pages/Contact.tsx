@@ -4,7 +4,7 @@ import { MessageCircle, Instagram } from 'lucide-react';
 const Contact = () => {
     return (
         <section className="py-12 bg-white text-black min-h-screen">
-            <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-8">
+            <div className="max-w-7xl mx-auto px-8 sm:px-8 lg:px-8">
 
                 {/* Header Centered */}
                 <div className="text-center mb-12 animate-fade-in-up">

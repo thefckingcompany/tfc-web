@@ -15,7 +15,7 @@ export const Hero = () => {
             </div>
 
             {/* Content */}
-            <div className="relative z-10 text-center px-6 max-w-5xl mx-auto flex flex-col items-center">
+            <div className="relative z-10 text-center px-8 max-w-5xl mx-auto flex flex-col items-center">
 
                 {/* Main Title Stack */}
                 <h1 className="text-6xl md:text-8xl lg:text-9xl font-oswald font-bold text-white leading-none tracking-tighter mb-2 uppercase">
