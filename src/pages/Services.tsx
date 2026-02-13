@@ -33,13 +33,13 @@ const Services = () => {
                         {categories[0].items.map((item) => (
                             <div key={item.name} className="flex flex-col sm:flex-row justify-between items-baseline group py-6 border-b border-gray-100 last:border-0 hover:bg-gray-50 transition-colors px-4 rounded-lg">
                                 <div className="flex-1 pr-8">
-                                    <h3 className="text-xl md:text-2xl font-oswald font-bold text-black uppercase tracking-wide">
+                                    <h3 className="text-base md:text-xl font-oswald font-bold text-black uppercase tracking-wide">
                                         {item.name}
                                     </h3>
-                                    <p className="text-base text-gray-500 mt-2 font-sans">{item.desc}</p>
+                                    <p className="text-sm md:text-base text-gray-500 mt-2 font-sans">{item.desc}</p>
                                 </div>
                                 <div className="w-full sm:w-auto mt-4 sm:mt-0 flex-none">
-                                    <span className="text-xl font-bold font-oswald text-black whitespace-nowrap">
+                                    <span className="text-base md:text-xl font-bold font-oswald text-black whitespace-nowrap">
                                         {item.price}
                                     </span>
                                 </div>

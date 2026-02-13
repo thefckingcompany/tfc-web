@@ -34,28 +34,28 @@ const Contact = () => {
 
                         <div className="flex flex-col gap-12 mb-16">
                             <div>
-                                <h3 className="text-lg md:text-xl font-oswald font-bold uppercase tracking-widest mb-4 border-b-2 border-black inline-block py-1">Dirección</h3>
+                                <h3 className="text-base md:text-xl font-oswald font-bold uppercase tracking-widest mb-4 border-b-2 border-black inline-block py-1">Dirección</h3>
                                 <a
                                     href="https://google.com/maps?ll=28.07699,-16.55746&z=19&t=h&hl=es&gl=ES&mapclient=embed&q=C.+Princesa+Ifara,+5+38611+San+Isidro+Santa+Cruz+de+Tenerife"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="block text-gray-600 font-sans leading-relaxed text-base tracking-wide hover:text-black transition-colors"
+                                    className="block text-gray-600 font-sans leading-relaxed text-sm md:text-base tracking-wide hover:text-black transition-colors"
                                 >
                                     Calle Princesa Ifara, Local 5<br />
                                     38611 Granadilla de Abona (Canarias)
                                 </a>
                             </div>
                             <div>
-                                <h3 className="text-lg md:text-xl font-oswald font-bold uppercase tracking-widest mb-4 border-b-2 border-black inline-block py-1">Teléfono</h3>
+                                <h3 className="text-base md:text-xl font-oswald font-bold uppercase tracking-widest mb-4 border-b-2 border-black inline-block py-1">Teléfono</h3>
                                 <a
                                     href="tel:+34664194168"
-                                    className="block text-gray-600 font-sans leading-relaxed text-xl tracking-wide font-bold hover:text-black transition-colors"
+                                    className="block text-gray-600 font-sans leading-relaxed text-lg md:text-2xl tracking-wide font-bold hover:text-black transition-colors"
                                 >
                                     664 194 168
                                 </a>
                             </div>
                             <div>
-                                <h3 className="text-lg md:text-xl font-oswald font-bold uppercase tracking-widest mb-6 border-b-2 border-black inline-block py-1">Horario</h3>
+                                <h3 className="text-base md:text-xl font-oswald font-bold uppercase tracking-widest mb-6 border-b-2 border-black inline-block py-1">Horario</h3>
                                 <ul className="text-gray-600 font-sans leading-relaxed space-y-4 text-base tracking-wide w-full max-w-md">
                                     <li className="flex justify-between items-center border-b border-gray-200 pb-2">
                                         <span>Lunes a Viernes</span>

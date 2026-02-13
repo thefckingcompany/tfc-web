@@ -42,7 +42,7 @@ export const TeamTeaser = () => {
                                     rel="noopener noreferrer"
                                     className="flex items-center gap-2 border-b border-white/50 pb-1 hover:border-white transition-colors cursor-pointer hover:text-gray-200"
                                 >
-                                    <h3 className="text-white font-oswald text-2xl uppercase tracking-widest">
+                                    <h3 className="text-white font-oswald text-xl md:text-2xl uppercase tracking-widest">
                                         {barber.name}
                                     </h3>
                                     <Instagram className="text-white" size={20} />

@@ -74,7 +74,7 @@ const Team = () => {
                         {/* Content */}
                         <div className="p-8 bg-white border border-gray-100 flex-grow flex flex-col justify-between">
                             <div>
-                                <h2 className="text-3xl font-oswald font-bold uppercase mb-1">{member.name}</h2>
+                                <h2 className="text-xl md:text-3xl font-oswald font-bold uppercase mb-1">{member.name}</h2>
                                 <h3 className="text-gray-500 font-sans text-xs uppercase tracking-[0.2em] mb-6">{member.role}</h3>
                                 <p className="text-gray-600 mb-6 leading-relaxed text-sm font-sans">
                                     {member.bio}
