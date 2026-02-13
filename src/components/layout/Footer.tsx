@@ -55,17 +55,34 @@ export const Footer = () => {
                     <div>
                         <h3 className="text-sm font-oswald font-bold uppercase tracking-[0.2em] mb-8 text-white">Ubicación</h3>
                         <ul className="space-y-4">
-                            <li className="flex items-start gap-4 text-gray-500 group">
-                                <MapPin className="shrink-0 group-hover:text-white transition-colors" size={16} />
-                                <span className="text-xs font-sans tracking-wide">Calle Princesa Ifara, Local 5<br />38611 Granadilla de Abona (Canarias)</span>
+                            <li>
+                                <a
+                                    href="https://google.com/maps?ll=28.07699,-16.55746&z=19&t=h&hl=es&gl=ES&mapclient=embed&q=C.+Princesa+Ifara,+5+38611+San+Isidro+Santa+Cruz+de+Tenerife"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-start gap-4 text-gray-500 group hover:text-white transition-colors"
+                                >
+                                    <MapPin className="shrink-0 transition-colors" size={16} />
+                                    <span className="text-xs font-sans tracking-wide">Calle Princesa Ifara, Local 5<br />38611 Granadilla de Abona (Canarias)</span>
+                                </a>
                             </li>
-                            <li className="flex items-center gap-4 text-gray-500 group">
-                                <Phone className="shrink-0 group-hover:text-white transition-colors" size={16} />
-                                <span className="text-xs font-sans tracking-wide">664 194 168</span>
+                            <li>
+                                <a
+                                    href="tel:+34664194168"
+                                    className="flex items-center gap-4 text-gray-500 group hover:text-white transition-colors"
+                                >
+                                    <Phone className="shrink-0 transition-colors" size={16} />
+                                    <span className="text-xs font-sans tracking-wide">664 194 168</span>
+                                </a>
                             </li>
-                            <li className="flex items-center gap-4 text-gray-500 group">
-                                <Mail className="shrink-0 group-hover:text-white transition-colors" size={16} />
-                                <span className="text-xs font-sans tracking-wide">thefckingcompanyacc@gmail.com</span>
+                            <li>
+                                <a
+                                    href="mailto:thefckingcompanyacc@gmail.com"
+                                    className="flex items-center gap-4 text-gray-500 group hover:text-white transition-colors"
+                                >
+                                    <Mail className="shrink-0 transition-colors" size={16} />
+                                    <span className="text-xs font-sans tracking-wide">thefckingcompanyacc@gmail.com</span>
+                                </a>
                             </li>
                         </ul>
                     </div>
