@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Instagram, MessageCircle } from 'lucide-react';
 
@@ -87,11 +88,11 @@ export const Navbar = () => {
                 </div>
             </div>
 
-            {/* Mobile Dropdown Overlay */}
-            {isOpen && (
+            {/* Mobile Dropdown Overlay - Rendered in Portal to escape parent stacking context (backdrop-filter) */}
+            {isOpen && createPortal(
                 <div
                     style={{ backgroundColor: '#000000' }}
-                    className="md:hidden fixed top-0 left-0 w-full h-full z-[100] text-white flex flex-col overscroll-none"
+                    className="md:hidden fixed top-0 left-0 w-full h-full z-[9999] text-white flex flex-col overscroll-none animate-in fade-in duration-200"
                 >
 
                     {/* Top Bar: Logo & Close Button */}
@@ -155,7 +156,8 @@ export const Navbar = () => {
                             <Instagram size={32} />
                         </a>
                     </div>
-                </div>
+                </div>,
+                document.body
             )}
         </nav>
     );
