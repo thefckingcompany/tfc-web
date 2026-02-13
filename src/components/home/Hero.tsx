@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 export const Hero = () => {
     return (
-        <div className="relative h-[100vh] flex items-center justify-center overflow-hidden bg-black">
+        <div className="relative h-[110vh] flex items-center justify-center overflow-hidden bg-black">
             {/* Background with Overlay */}
             <div className="absolute inset-0 z-0">
                 <img
