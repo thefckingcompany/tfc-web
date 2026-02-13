@@ -14,7 +14,7 @@
 
 @layer base {
   body {
-    @apply bg-white text-black font-sans antialiased;
+    @apply bg-black text-black font-sans antialiased;
   }
 
   h1,
@@ -34,6 +34,8 @@
 
 /* Hide scrollbar for IE, Edge and Firefox */
 body {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
