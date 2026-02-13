@@ -15,16 +15,16 @@ export const Hero = () => {
             </div>
 
             {/* Content */}
-            <div className="relative z-10 text-center px-10 max-w-5xl mx-auto flex flex-col items-center">
+            <div className="relative z-10 text-center px-8 max-w-5xl mx-auto flex flex-col items-center">
 
                 {/* Main Title Stack */}
-                <h1 className="text-5xl md:text-7xl lg:text-8xl font-oswald font-bold text-white leading-none tracking-tighter mb-2 uppercase">
+                <h1 className="text-5xl md:text-8xl lg:text-9xl font-oswald font-bold text-white leading-none tracking-tighter mb-2 uppercase">
                     The Fucking<br />
                     <span className="block mt-[-10px]">Company</span>
                 </h1>
 
                 {/* Script Subtitle */}
-                <h2 className="text-3xl md:text-5xl font-script text-white mb-6 transform -rotate-2">
+                <h2 className="text-3xl md:text-6xl font-script text-white mb-6 transform -rotate-2">
                     Barber Shop
                 </h2>
 
@@ -32,7 +32,7 @@ export const Hero = () => {
                 <div className="w-24 h-[1px] bg-white/50 mb-8"></div>
 
                 {/* Tagline */}
-                <p className="text-sm md:text-base text-gray-300 font-sans tracking-[0.3em] uppercase mb-12">
+                <p className="text-xs md:text-base text-gray-300 font-sans tracking-[0.3em] uppercase mb-12">
                     Barbería profesional. Citas sin esperas.
                 </p>
 
