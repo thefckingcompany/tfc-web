@@ -2,7 +2,7 @@ import React from 'react';
 import { useLocation } from 'react-router-dom';
 import { Navbar } from './Navbar';
 import { Footer } from './Footer';
-import { BackToTop } from './BackToTop';
+
 
 interface MainLayoutProps {
     children: React.ReactNode;
@@ -19,7 +19,7 @@ export const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
                 {children}
             </main>
             <Footer />
-            <BackToTop />
+
         </div>
     );
 };
