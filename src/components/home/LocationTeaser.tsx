@@ -3,7 +3,7 @@ import { MessageCircle, Instagram } from 'lucide-react';
 export const LocationTeaser = () => {
     return (
         <section className="pt-0 pb-24 bg-white text-black relative">
-            <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-2xl mx-auto px-6 sm:px-8 lg:px-8">
 
                 {/* Header Centered */}
                 <div className="text-center mb-20 animate-fade-in-up">
