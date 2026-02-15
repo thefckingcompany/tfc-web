@@ -3,9 +3,9 @@ import { Instagram } from 'lucide-react';
 
 const barbers = [
     { name: 'Juandi', img: '/juandi.jpg', instagram: 'https://www.instagram.com/jdbarber96/', objectPosition: 'object-top' },
-    { name: 'Jhoiber', img: '/jhoiber1.png', instagram: 'https://www.instagram.com/jhoiiberr_/', objectPosition: 'object-center' },
-    { name: 'Diego', img: '/diego1.png', instagram: 'https://www.instagram.com/diegorm999/', objectPosition: 'object-center' },
-    { name: 'Alejandro', img: '/alejandro1.png', instagram: 'https://www.instagram.com/aleeeee._.rb/', objectPosition: 'object-center' },
+    { name: 'Jhoiber', img: '/jhoiber1.png', instagram: 'https://www.instagram.com/jhoiiberr_/', objectPosition: 'object-top' },
+    { name: 'Diego', img: '/diego1.png', instagram: 'https://www.instagram.com/diegorm999/', objectPosition: 'object-top' },
+    { name: 'Alejandro', img: '/alejandro1.png', instagram: 'https://www.instagram.com/aleeeee._.rb/', objectPosition: 'object-top' },
 ];
 
 export const TeamTeaser = () => {
