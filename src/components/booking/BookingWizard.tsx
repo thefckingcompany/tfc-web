@@ -100,7 +100,7 @@ export const BookingWizard = () => {
                     {[1, 2, 3].map((s) => (
                         <div key={s} className="relative flex flex-col items-center group">
                             <div className={cn(
-                                "w-10 h-10 flex items-center justify-center rounded-full font-oswald font-bold text-base transition-all duration-300 z-10 border-2",
+                                "w-8 h-8 flex items-center justify-center rounded-full font-oswald font-bold text-sm transition-all duration-300 z-10 border-2",
                                 step >= s ? "bg-black border-black text-white scale-110" : "bg-white border-gray-300 text-gray-300"
                             )}>
                                 {s}

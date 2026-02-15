@@ -11,7 +11,7 @@ interface StepBarberProps {
 export const StepBarber: React.FC<StepBarberProps> = ({ selectedBarber, onSelect }) => {
     return (
         <div className="animate-fade-in relative">
-            <h2 className="text-3xl font-oswald font-bold text-black mb-10 text-center uppercase tracking-widest">1. Selecciona Barbero</h2>
+            <h2 className="text-2xl font-oswald font-bold text-black mb-10 text-center uppercase tracking-widest">Selecciona Barbero</h2>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 {barbers.map((barber) => (
