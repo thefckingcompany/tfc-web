@@ -1,20 +1,16 @@
-
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export const AboutSection = () => {
     return (
         <section className="py-24 bg-white text-black overflow-hidden">
-            <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+            {/* Standard container width and padding matching TeamTeaser */}
+            <div className="max-w-7xl mx-auto px-10 sm:px-8 lg:px-8">
 
-                {/* Header Centered for Mobile, maybe Split for Desktop? 
-                   The user image shows "NOSOTROS" big at the top, centered or part of the layout. 
-                   Actually in the image, "Nuestra Historia" and "NOSOTROS" seem to be a main header 
-                   ABOVE the split content. Let's follow that.
-                */}
-                <div className="text-center mb-16 md:mb-24 animate-fade-in-up">
-                    <p className="font-script text-3xl md:text-4xl text-gray-500 mb-2">Nuestra Historia</p>
-                    <h2 className="text-5xl md:text-7xl font-oswald font-bold uppercase tracking-tighter text-black">
+                {/* Header Centered - Matching LocationTeaser/TeamTeaser style */}
+                <div className="text-center mb-20 animate-fade-in-up">
+                    <p className="font-script text-2xl text-gray-500 mb-2">Nuestra Historia</p>
+                    <h2 className="text-3xl sm:text-4xl md:text-6xl font-oswald font-bold uppercase tracking-tighter text-black">
                         NOSOTROS
                     </h2>
                 </div>
@@ -24,29 +20,27 @@ export const AboutSection = () => {
                     {/* Image Column */}
                     <div className="relative group animate-fade-in-left">
                         <div className="aspect-[4/5] overflow-hidden bg-gray-100">
-                            {/* Placeholder image until generation succeeds */}
                             <img
                                 src="/about-barber.png"
                                 alt="Barbero trabajando"
                                 className="w-full h-full object-cover grayscale contrast-125 transition-transform duration-700 group-hover:scale-105"
                             />
                         </div>
-                        {/* Decorative element possibly? */}
                     </div>
 
                     {/* Content Column */}
                     <div className="animate-fade-in-right space-y-8">
 
                         <div>
-                            <span className="text-xs md:text-sm font-bold tracking-[0.2em] uppercase text-gray-400 mb-4 block">
+                            <span className="text-sm font-bold tracking-[0.2em] uppercase text-gray-400 mb-4 block font-oswald">
                                 Artesanía & Precisión
                             </span>
-                            <h3 className="text-2xl md:text-4xl font-serif text-black leading-tight">
+                            <h3 className="text-xl md:text-3xl font-oswald text-black leading-tight">
                                 No solo cortamos el cabello; esculpimos identidades con el rigor de la vieja escuela y la visión de la nueva era.
                             </h3>
                         </div>
 
-                        <div className="space-y-6 text-gray-600 font-sans leading-relaxed text-base md:text-lg">
+                        <div className="space-y-6 text-gray-500 font-sans leading-relaxed text-sm md:text-base">
                             <p>
                                 En <strong className="text-black">The Fucking Company</strong>, entendemos que la barbería es un ritual sagrado.
                                 Fundada con la ambición de elevar el estándar del cuidado masculino, nuestra tienda combina la elegancia
@@ -60,14 +54,14 @@ export const AboutSection = () => {
                         </div>
 
                         {/* Stats */}
-                        <div className="grid grid-cols-2 gap-8 border-t border-gray-100 pt-8 mt-8">
+                        <div className="grid grid-cols-2 gap-8 border-t border-gray-200 pt-8 mt-8">
                             <div>
-                                <span className="block text-3xl md:text-4xl font-oswald font-bold text-black mb-1">10+</span>
-                                <span className="text-xs md:text-sm uppercase tracking-widest text-gray-500">Años de Maestría</span>
+                                <span className="block text-3xl md:text-5xl font-oswald font-bold text-black mb-1">10+</span>
+                                <span className="text-xs uppercase tracking-widest text-gray-500 font-oswald">Años de Maestría</span>
                             </div>
                             <div>
-                                <span className="block text-3xl md:text-4xl font-oswald font-bold text-black mb-1">5k+</span>
-                                <span className="text-xs md:text-sm uppercase tracking-widest text-gray-500">Estilos Creados</span>
+                                <span className="block text-3xl md:text-5xl font-oswald font-bold text-black mb-1">5k+</span>
+                                <span className="text-xs uppercase tracking-widest text-gray-500 font-oswald">Estilos Creados</span>
                             </div>
                         </div>
 
