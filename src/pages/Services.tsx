@@ -15,7 +15,7 @@ const categories = [
 
 const Services = () => {
     return (
-        <div className="bg-white text-black pt-12 pb-20 px-10 sm:px-8 lg:px-8">
+        <div className="bg-white text-black pt-12 pb-12 px-10 sm:px-8 lg:px-8">
 
             {/* Header */}
             <div className="text-center mb-1 pt-0">
@@ -50,7 +50,7 @@ const Services = () => {
             </div>
 
             {/* CTA Footer */}
-            <div className="text-center mt-8">
+            <div className="text-center mt-4">
                 <p className="text-gray-500 mb-6 uppercase tracking-[0.2em] text-xs">¿Listo para reservar?</p>
                 <Link
                     to="/reservar"
