@@ -50,7 +50,7 @@ const Services = () => {
             </div>
 
             {/* CTA Footer */}
-            <div className="text-center mt-4">
+            <div className="text-center mt-2">
                 <p className="text-gray-500 mb-6 uppercase tracking-[0.2em] text-xs">¿Listo para reservar?</p>
                 <Link
                     to="/reservar"
