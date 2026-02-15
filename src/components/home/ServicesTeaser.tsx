@@ -62,7 +62,7 @@ export const ServicesTeaser = () => {
 
                 </div>
 
-                <div className="text-center mt-8">
+                <div className="text-center mt-10">
                     <Link
                         to="/servicios"
                         className="inline-block px-10 py-4 border border-black text-black font-oswald font-bold text-sm uppercase tracking-[0.2em] hover:bg-black hover:text-white transition-all transform hover:-translate-y-1"
