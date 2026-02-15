@@ -87,16 +87,16 @@ export const BookingWizard = () => {
         )}>
 
             {/* Progress Bar (3 Steps) */}
-            <div className="flex items-center justify-center mb-16 relative">
+            <div className="flex items-center justify-center mb-10 relative">
                 {/* Connecting Line */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 w-[350px] h-[2px] bg-gray-200 z-0">
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 w-[280px] h-[2px] bg-gray-200 z-0">
                     <div
                         className="h-full bg-black transition-all duration-500 ease-out"
                         style={{ width: `${((step - 1) / 2) * 100}%` }}
                     ></div>
                 </div>
 
-                <div className="flex justify-between w-full max-w-[350px]">
+                <div className="flex justify-between w-full max-w-[280px]">
                     {[1, 2, 3].map((s) => (
                         <div key={s} className="relative flex flex-col items-center group">
                             <div className={cn(
