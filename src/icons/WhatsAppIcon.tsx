@@ -1,4 +1,4 @@
-import React from 'react';
+
 
 export const WhatsAppIcon = ({ size = 24, className = "" }: { size?: number | string, className?: string }) => (
     <svg
