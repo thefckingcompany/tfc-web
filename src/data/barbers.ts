@@ -12,21 +12,21 @@ export const barbers: Barber[] = [
         id: '2',
         name: 'Jhoiber',
         role: 'Especialista en Degradados',
-        image: '/jhoiber.jpg',
+        image: '/jhoiber1.png',
         setmoreUrl: 'https://thefuckingcompanyed3h.setmore.com/joiver'
     },
     {
         id: '3',
         name: 'Diego',
         role: 'Experto en Barbas',
-        image: '/diego.jpg',
+        image: '/diego1.png',
         setmoreUrl: 'https://thefuckingcompanyed3h.setmore.com/reserva-cita-con-diego'
     },
     {
         id: '4',
         name: 'Alejandro',
         role: 'Estilista',
-        image: '/alejandro.jpg',
+        image: '/alejandro1.png',
         setmoreUrl: 'https://thefuckingcompanyed3h.setmore.com/reserva-cita-con-alejandro'
     },
 ];
