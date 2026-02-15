@@ -44,7 +44,7 @@ const team = [
         specialties: ['Color', 'Mechas', 'Texturizado'],
         instagram: 'https://www.instagram.com/aleeeee._.rb/',
         username: '@aleeeee._.rb',
-        objectPosition: 'object-top'
+        objectPosition: 'object-center'
     },
 ];
 
