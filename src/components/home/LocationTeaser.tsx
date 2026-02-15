@@ -13,7 +13,7 @@ export const LocationTeaser = () => {
                     </h2>
                 </div>
 
-                <div className="flex flex-col gap-12 mb-20">
+                <div className="flex flex-col gap-12">
 
                     {/* Dirección */}
                     <div className="group border-b border-gray-200 pb-8">
@@ -52,7 +52,7 @@ export const LocationTeaser = () => {
                     </div>
 
                     {/* Horario */}
-                    <div className="group border-b border-gray-200 pb-8">
+                    <div className="group">
                         <h3 className="text-xl font-oswald font-bold uppercase tracking-wide group-hover:text-gray-600 transition-colors mb-4">
                             Horario
                         </h3>
@@ -75,7 +75,7 @@ export const LocationTeaser = () => {
                 </div>
 
                 {/* Buttons */}
-                <div className="flex flex-col sm:flex-row justify-center gap-6">
+                <div className="flex flex-col sm:flex-row justify-center gap-6 mt-10">
                     <a
                         href="https://wa.me/34664194168"
                         target="_blank"
