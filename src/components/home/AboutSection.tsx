@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export const AboutSection = () => {
     return (
-        <section className="pt-0 pb-24 bg-white text-black overflow-hidden">
+        <section className="pt-0 pb-12 bg-white text-black overflow-hidden">
             {/* Standard container width and padding matching TeamTeaser */}
             <div className="max-w-7xl mx-auto px-10 sm:px-8 lg:px-8">
 
