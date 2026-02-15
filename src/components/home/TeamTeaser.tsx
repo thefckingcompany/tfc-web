@@ -52,7 +52,7 @@ export const TeamTeaser = () => {
                     ))}
                 </div>
 
-                <div className="text-center mt-16">
+                <div className="text-center mt-10">
                     <Link
                         to="/reservar"
                         className="inline-block px-12 py-5 bg-black text-white font-oswald font-bold text-2xl uppercase tracking-widest hover:bg-gray-900 transition-colors transform hover:-translate-y-1 skew-x-[-10deg]"
