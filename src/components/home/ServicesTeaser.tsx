@@ -30,7 +30,7 @@ const services = [
 
 export const ServicesTeaser = () => {
     return (
-        <section className="pt-32 pb-12 bg-white text-black relative">
+        <section className="pt-16 pb-12 bg-white text-black relative">
             <div className="max-w-6xl mx-auto px-10 sm:px-8 lg:px-8">
 
                 {/* Header */}
