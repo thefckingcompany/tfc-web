@@ -18,7 +18,7 @@ export const Footer = () => {
                             </h2>
                         </div>
                         <p className="text-gray-500 text-xs leading-relaxed max-w-xs font-sans tracking-wide">
-                            PREMIUM GROOMING FOR THE MODERN GENTLEMAN. ESTABLISHED 2024.
+                            PREMIUM GROOMING FOR THE MODERN GENTLEMAN. ESTABLISHED 2020.
                         </p>
                         <div className="flex gap-4">
                             <a href="https://wa.me/34664194168" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-black transition-all">
