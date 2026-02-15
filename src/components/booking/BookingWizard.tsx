@@ -106,7 +106,7 @@ export const BookingWizard = () => {
                                 {s}
                             </div>
                             <span className={cn(
-                                "absolute -bottom-8 text-xs font-sans uppercase tracking-[0.2em] font-bold transition-colors duration-300",
+                                "absolute -bottom-6 text-[10px] font-sans uppercase tracking-[0.2em] font-bold transition-colors duration-300",
                                 step >= s ? "text-black" : "text-gray-300"
                             )}>
                                 {s === 1 ? "EQUIPO" : s === 2 ? "SERVICIOS" : "RESERVA"}
