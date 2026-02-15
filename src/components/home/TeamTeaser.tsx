@@ -31,8 +31,7 @@ export const TeamTeaser = () => {
                             <img
                                 src={barber.img}
                                 alt={barber.name}
-                                className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:scale-105 contrast-125 brightness-90"
-                                style={{ objectPosition: barber.objectPosition || 'center' }}
+                                className={`w-full h-full object-cover grayscale transition-all duration-700 group-hover:scale-105 contrast-125 brightness-90 ${barber.objectPosition || 'object-center'}`}
                             />
                             {/* Always Visible Name Overlay */}
                             <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent pt-20 pb-10 flex flex-col items-center justify-end transition-opacity">
