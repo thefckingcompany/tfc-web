@@ -14,7 +14,7 @@ const Contact = () => {
                     </h2>
                 </div>
 
-                <div className="flex flex-col md:flex-row gap-16 items-start">
+                <div className="flex flex-col md:flex-row gap-8 items-start">
 
                     {/* Map */}
                     <div className="w-full md:w-1/2 aspect-square border border-gray-200 shadow-lg animate-fade-in-left">
@@ -32,7 +32,7 @@ const Contact = () => {
                     {/* Info */}
                     <div className="w-full md:w-1/2 flex flex-col justify-center animate-fade-in-right">
 
-                        <div className="flex flex-col gap-12 mb-16">
+                        <div className="flex flex-col gap-8 mb-8">
                             <div>
                                 <h3 className="text-base md:text-xl font-oswald font-bold uppercase tracking-widest mb-4 border-b-2 border-black inline-block py-1">Dirección</h3>
                                 <a
@@ -65,7 +65,7 @@ const Contact = () => {
                                         <span>Sábados</span>
                                         <span className="font-bold text-black text-lg">10:00 - 14:00</span>
                                     </li>
-                                    <li className="flex justify-between items-center border-b border-gray-200 pb-2">
+                                    <li className="flex justify-between items-center pb-2">
                                         <span>Domingos</span>
                                         <span className="italic text-gray-400 font-medium">Cerrado</span>
                                     </li>
