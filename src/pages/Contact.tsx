@@ -7,7 +7,7 @@ const Contact = () => {
             <div className="max-w-7xl mx-auto px-10 sm:px-8 lg:px-8">
 
                 {/* Header Centered */}
-                <div className="text-center mb-12 animate-fade-in-up">
+                <div className="text-center mb-6 animate-fade-in-up">
                     <p className="font-script text-2xl text-gray-500 mb-2">Visítanos</p>
                     <h2 className="text-3xl sm:text-4xl md:text-6xl font-oswald font-bold uppercase tracking-tighter text-black">
                         Contacto
@@ -17,7 +17,7 @@ const Contact = () => {
                 <div className="flex flex-col md:flex-row gap-16 items-start">
 
                     {/* Map */}
-                    <div className="w-full md:w-1/2 h-[600px] border border-gray-200 shadow-lg animate-fade-in-left">
+                    <div className="w-full md:w-1/2 aspect-square border border-gray-200 shadow-lg animate-fade-in-left">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d609.6318844102494!2d-16.55746!3d28.07699!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc6a9e359105cdd9%3A0x468a2f86410d8fbe!2sC.%20Princesa%20Ifara%2C%205%2C%2038611%20San%20Isidro%2C%20Santa%20Cruz%20de%20Tenerife!5e1!3m2!1ses!2ses!4v1770920129863!5m2!1ses!2ses"
                             width="100%"
