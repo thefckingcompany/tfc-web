@@ -5,6 +5,7 @@ import { Menu, X, Instagram, MessageCircle, Phone } from 'lucide-react';
 
 const navLinks = [
     { name: 'INICIO', path: '/' },
+    { name: 'NOSOTROS', path: '/nosotros' },
     { name: 'SERVICIOS', path: '/servicios' },
     { name: 'EQUIPO', path: '/equipo' },
     { name: 'GALERÍA', path: '/galeria' },
