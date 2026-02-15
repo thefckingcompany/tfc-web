@@ -34,7 +34,7 @@ export const ServicesTeaser = () => {
             <div className="max-w-6xl mx-auto px-10 sm:px-8 lg:px-8">
 
                 {/* Header */}
-                <div className="text-center mb-14 animate-fade-in-up">
+                <div className="text-center mb-12 animate-fade-in-up">
                     <p className="font-script text-2xl text-gray-500 mb-2">Calidad sobre cantidad</p>
                     <h2 className="text-3xl sm:text-4xl md:text-6xl font-oswald font-bold uppercase tracking-tighter text-black">
                         Nuestros Servicios
