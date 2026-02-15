@@ -46,7 +46,7 @@ export const ServicesTeaser = () => {
                     {services.map((service, index) => (
                         <div
                             key={index}
-                            className={`group ${index === services.length - 1 ? '' : 'border-b border-gray-200'} pb-8 ${index === 4 ? 'md:col-span-2 md:w-1/2 md:mx-auto' : ''}`}
+                            className={`group ${index === services.length - 1 ? 'pb-0' : 'border-b border-gray-200 pb-8'} ${index === 4 ? 'md:col-span-2 md:w-1/2 md:mx-auto' : ''}`}
                         >
                             <div className="flex justify-between items-baseline mb-3">
                                 <h3 className="text-base md:text-xl font-oswald font-bold uppercase tracking-wide group-hover:text-gray-600 transition-colors">
@@ -62,7 +62,7 @@ export const ServicesTeaser = () => {
 
                 </div>
 
-                <div className="text-center mt-12">
+                <div className="text-center mt-8">
                     <Link
                         to="/servicios"
                         className="inline-block px-10 py-4 border border-black text-black font-oswald font-bold text-sm uppercase tracking-[0.2em] hover:bg-black hover:text-white transition-all transform hover:-translate-y-1"
