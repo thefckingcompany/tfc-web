@@ -51,7 +51,7 @@ const team = [
 const Team = () => {
     return (
         <div className="min-h-screen bg-white text-black py-12 px-10 sm:px-8 lg:px-8">
-            <div className="text-center mb-12 pt-0">
+            <div className="text-center mb-1 pt-0">
                 <p className="font-script text-2xl text-gray-500 mb-2">El Talento</p>
                 <h1 className="text-3xl sm:text-4xl md:text-7xl font-oswald font-bold uppercase tracking-tighter mb-6">
                     Conoce al Equipo
