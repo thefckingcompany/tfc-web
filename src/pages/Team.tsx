@@ -11,7 +11,7 @@ const team = [
         specialties: ['Tijera', 'Old School', 'Visagismo'],
         instagram: 'https://www.instagram.com/jdbarber96/',
         username: '@jdbarber96',
-        objectPosition: 'object-center'
+        objectPosition: 'object-top'
     },
     {
         id: '2',

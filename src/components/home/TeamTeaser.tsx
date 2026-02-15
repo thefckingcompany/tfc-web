@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { Instagram } from 'lucide-react';
 
 const barbers = [
-    { name: 'Juandi', img: '/juandi.jpg', instagram: 'https://www.instagram.com/jdbarber96/', objectPosition: 'object-center' },
+    { name: 'Juandi', img: '/juandi.jpg', instagram: 'https://www.instagram.com/jdbarber96/', objectPosition: 'object-top' },
     { name: 'Jhoiber', img: '/jhoiber.jpg', instagram: 'https://www.instagram.com/jhoiiberr_/', objectPosition: 'object-center' },
     { name: 'Diego', img: '/diego.jpg', instagram: 'https://www.instagram.com/diegorm999/', objectPosition: 'object-center' },
     { name: 'Alejandro', img: '/alejandro.jpg', instagram: 'https://www.instagram.com/aleeeee._.rb/', objectPosition: 'object-center' },
