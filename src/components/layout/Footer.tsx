@@ -1,5 +1,6 @@
-import { Instagram, MapPin, Phone, Mail, MessageCircle } from 'lucide-react';
+import { Instagram, MapPin, Phone, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { WhatsAppIcon } from '../../icons/WhatsAppIcon';
 
 export const Footer = () => {
     return (
@@ -22,7 +23,7 @@ export const Footer = () => {
                         </p>
                         <div className="flex gap-4">
                             <a href="https://wa.me/34664194168" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-black transition-all">
-                                <MessageCircle size={14} />
+                                <WhatsAppIcon size={14} />
                             </a>
                             <a href="https://www.instagram.com/thefucking.company/" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-black transition-all">
                                 <Instagram size={14} />

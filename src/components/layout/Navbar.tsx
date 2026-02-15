@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Instagram, MessageCircle, Phone } from 'lucide-react';
+import { Menu, X, Instagram, Phone } from 'lucide-react';
+import { WhatsAppIcon } from '../../icons/WhatsAppIcon';
 
 const navLinks = [
     { name: 'INICIO', path: '/' },
@@ -146,7 +147,7 @@ export const Navbar = () => {
                             rel="noopener noreferrer"
                             className="text-white hover:text-green-400 transition-colors"
                         >
-                            <MessageCircle size={32} />
+                            <WhatsAppIcon size={32} />
                         </a>
                         <a
                             href="https://www.instagram.com/thefucking.company/"

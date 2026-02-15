@@ -1,4 +1,5 @@
-import { MessageCircle, Instagram } from 'lucide-react';
+import { Instagram } from 'lucide-react';
+import { WhatsAppIcon } from '../../icons/WhatsAppIcon';
 
 export const LocationTeaser = () => {
     return (
@@ -82,7 +83,7 @@ export const LocationTeaser = () => {
                         rel="noopener noreferrer"
                         className="inline-flex items-center justify-center gap-3 px-10 py-4 bg-black text-white font-oswald font-bold text-sm uppercase tracking-[0.2em] hover:bg-[#25D366] transition-colors min-w-[200px]"
                     >
-                        <MessageCircle size={18} />
+                        <WhatsAppIcon size={18} />
                         Whatsapp
                     </a>
                     <a
