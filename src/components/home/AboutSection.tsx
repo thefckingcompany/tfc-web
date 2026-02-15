@@ -21,7 +21,7 @@ export const AboutSection = () => {
                     <div className="relative group animate-fade-in-left">
                         <div className="aspect-[4/5] overflow-hidden bg-gray-100">
                             <img
-                                src="/about-barber.png"
+                                src="/ft-nosotros-tfc.jpg"
                                 alt="Barbero trabajando"
                                 className="w-full h-full object-cover grayscale contrast-125 transition-transform duration-700 group-hover:scale-105"
                             />
