@@ -59,7 +59,7 @@ const Team = () => {
                 <div className="w-16 h-[1px] bg-black mx-auto"></div>
             </div>
 
-            <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 sm:gap-16">
+            <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
                 {team.map((member) => (
                     <div key={member.name} className="flex flex-col shadow-sm hover:shadow-xl transition-shadow duration-300">
                         {/* Image */}
