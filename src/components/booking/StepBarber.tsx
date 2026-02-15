@@ -28,7 +28,7 @@ export const StepBarber: React.FC<StepBarberProps> = ({ selectedBarber, onSelect
                         <img
                             src={barber.image}
                             alt={barber.name}
-                            className={`w-full h-full object-cover ${(barber.name === 'Juandi' || barber.name === 'Jhoiber' || barber.name === 'Diego' || barber.name === 'Alejandro') ? 'object-top' : 'object-center'}`}
+                            className={`w-full h-full object-cover ${(barber.name === 'Juandi' || barber.name === 'Jhoiber' || barber.name === 'Diego') ? 'object-top' : 'object-center'}`}
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
                         <div className="absolute bottom-0 left-0 p-6 w-full">
