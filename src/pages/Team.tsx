@@ -79,13 +79,7 @@ const Team = () => {
                                 <p className="text-gray-600 mb-6 leading-relaxed text-sm font-sans">
                                     {member.bio}
                                 </p>
-                                <div className="flex flex-wrap gap-2 mb-8">
-                                    {member.specialties.map(s => (
-                                        <span key={s} className="px-3 py-1 bg-gray-100 text-[10px] uppercase font-bold tracking-wider text-gray-700">
-                                            {s}
-                                        </span>
-                                    ))}
-                                </div>
+
                             </div>
 
                             <div className="flex justify-between items-center pt-6 border-t border-gray-100">
