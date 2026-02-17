@@ -81,7 +81,7 @@ export const LocationTeaser = () => {
                         href="https://wa.me/34664194168"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center gap-3 px-10 py-4 bg-black text-white border border-transparent font-oswald font-bold text-sm uppercase tracking-[0.2em] hover:bg-[#25D366] transition-colors min-w-[200px]"
+                        className="inline-flex items-center justify-center gap-3 px-10 py-4 bg-black text-white font-oswald font-bold text-sm uppercase tracking-[0.2em] hover:bg-[#25D366] transition-colors min-w-[200px]"
                     >
                         <WhatsAppIcon size={18} />
                         Whatsapp

@@ -79,7 +79,7 @@ const Contact = () => {
                                 href="https://wa.me/34664194168"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="flex-1 inline-flex items-center justify-center gap-3 px-8 py-5 bg-black text-white border-2 border-transparent font-oswald font-bold text-base uppercase tracking-[0.2em] hover:bg-[#25D366] transition-all transform hover:-translate-y-1 shadow-md hover:shadow-xl"
+                                className="flex-1 inline-flex items-center justify-center gap-3 px-8 py-5 bg-black text-white font-oswald font-bold text-base uppercase tracking-[0.2em] hover:bg-[#25D366] transition-all transform hover:-translate-y-1 shadow-md hover:shadow-xl"
                             >
                                 <WhatsAppIcon size={20} />
                                 Whatsapp
