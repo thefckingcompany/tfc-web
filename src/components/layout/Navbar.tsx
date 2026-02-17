@@ -97,25 +97,31 @@ export const Navbar = () => {
                     className="md:hidden fixed top-0 left-0 w-full h-full z-[9999] text-white flex flex-col overscroll-none animate-in fade-in duration-200"
                 >
 
-                    {/* Top Bar: Logo & Close Button */}
-                    <div className="flex justify-between items-center p-6 border-b border-white/10 shrink-0">
-                        {/* Logo */}
-                        <div className="flex flex-col items-center" onClick={() => setIsOpen(false)}>
-                            <span className="text-2xl font-oswald font-bold tracking-tighter uppercase leading-none text-white">
-                                The Fucking
-                            </span>
-                            <span className="text-lg font-oswald uppercase tracking-[0.3em] leading-none opacity-80 text-white">
-                                Company
-                            </span>
-                        </div>
+                    {/* Top Bar: Logo & Close Button - Replicating Navbar structure exactly */}
+                    <div className="w-full border-b border-white/10 shrink-0">
+                        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                            <div className="flex items-center justify-between h-24">
+                                {/* Logo */}
+                                <div className="flex flex-col items-center" onClick={() => setIsOpen(false)}>
+                                    <span className="text-2xl font-oswald font-bold tracking-tighter uppercase leading-none text-white">
+                                        The Fucking
+                                    </span>
+                                    <span className="text-lg font-oswald uppercase tracking-[0.3em] leading-none opacity-80 text-white">
+                                        Company
+                                    </span>
+                                </div>
 
-                        {/* Close Button */}
-                        <button
-                            onClick={() => setIsOpen(false)}
-                            className="p-2 text-white hover:text-gray-400 transition-colors"
-                        >
-                            <X size={32} />
-                        </button>
+                                {/* Close Button */}
+                                <div>
+                                    <button
+                                        onClick={() => setIsOpen(false)}
+                                        className="text-white hover:opacity-70 transition-colors"
+                                    >
+                                        <X size={28} />
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     {/* Navigation Links */}
