@@ -209,13 +209,6 @@ body .cky-revisit-bottom-left .cky-revisit-btn svg {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
 }
 
-/* PWA Safe Area Fix - Only applies when installed as an app */
-@media all and (display-mode: standalone) {
-  .pwa-safe-top {
-    padding-top: env(safe-area-inset-top) !important;
-  }
-}
-
 .cky-preference-title {
   color: var(--color-tfc-accent) !important;
   font-family: var(--font-oswald) !important;
@@ -223,4 +216,14 @@ body .cky-revisit-bottom-left .cky-revisit-btn svg {
 
 .cky-switch input:checked+span {
   background-color: var(--color-tfc-accent) !important;
+}
+
+/* PWA Specific Styles */
+@media all and (display-mode: standalone) {
+
+  /* Increase bottom spacing for scroll indicator on PWA (mobile app) mode */
+  #pwa-scroll-indicator {
+    bottom: calc(8rem + env(safe-area-inset-bottom) + 3rem) !important;
+    /* ~11rem total */
+  }
 }
