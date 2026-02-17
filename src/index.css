@@ -86,16 +86,32 @@ button.cky-btn-accept:hover {
   color: var(--color-tfc-accent) !important;
 }
 
-/* Botón Rechazar todo (Secundario/Outline) */
+
+/* Botón Rechazar todo (Secundario/Outline) -> Cambiado a "Solo Necesarias" */
 button.cky-btn-reject {
   background-color: transparent !important;
-  color: var(--color-tfc-accent) !important;
+  color: transparent !important;
+  /* Hide original text "Rechazar todo" */
   border: 1px solid rgba(255, 255, 255, 0.3) !important;
-  font-family: var(--font-oswald) !important;
-  text-transform: uppercase !important;
   border-radius: 0 !important;
-  font-weight: 500 !important;
   transition: all 0.3s ease !important;
+  position: relative !important;
+}
+
+button.cky-btn-reject::after {
+  content: "SOLO NECESARIAS" !important;
+  color: var(--color-tfc-accent) !important;
+  font-family: var(--font-oswald) !important;
+  font-size: 16px !important;
+  /* Restaurar tamaño de fuente explícito */
+  text-transform: uppercase !important;
+  font-weight: 500 !important;
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  white-space: nowrap !important;
+  width: 100% !important;
 }
 
 button.cky-btn-reject:hover {
