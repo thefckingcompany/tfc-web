@@ -155,7 +155,7 @@ body .cky-revisit-bottom-left .cky-revisit-btn {
   background-repeat: no-repeat !important;
   background-position: center !important;
   background-size: 24px !important;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5) !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3) !important;
   z-index: 999999 !important;
 }
 
