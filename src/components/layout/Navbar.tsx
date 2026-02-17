@@ -89,7 +89,8 @@ export const Navbar = () => {
                     <div className="md:hidden">
                         <button
                             onClick={() => setIsOpen(!isOpen)}
-                            className={`${textColorClass} hover:opacity-70 transition-colors`}
+                            className={`${textColorClass} hover:opacity-70 transition-colors p-2 -mr-2`}
+                            aria-label="Menu"
                         >
                             {isOpen ? <X size={28} /> : <Menu size={28} />}
                         </button>
@@ -129,7 +130,8 @@ export const Navbar = () => {
                                 <div>
                                     <button
                                         onClick={() => setIsOpen(false)}
-                                        className="text-white hover:opacity-70 transition-colors"
+                                        className="text-white hover:opacity-70 transition-colors p-2 -mr-2"
+                                        aria-label="Cerrar menú"
                                     >
                                         <X size={28} />
                                     </button>
