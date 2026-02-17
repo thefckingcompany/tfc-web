@@ -43,3 +43,109 @@ body {
   scrollbar-width: none;
   /* Firefox */
 }
+
+/* CookieYes Custom Styles Overrides */
+/* Contenedor principal del banner */
+.cky-consent-bar {
+  background-color: var(--color-tfc-dark) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Título del banner */
+.cky-title {
+  color: var(--color-tfc-accent) !important;
+  font-family: var(--font-oswald) !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+
+/* Texto descriptivo */
+.cky-notice-des {
+  color: var(--color-tfc-text-muted) !important;
+  font-family: var(--font-sans) !important;
+  font-size: 0.9rem !important;
+  line-height: 1.5 !important;
+}
+
+/* Botón Aceptar todo (Primario) */
+button.cky-btn-accept {
+  background-color: var(--color-tfc-accent) !important;
+  color: var(--color-tfc-black) !important;
+  border: 1px solid var(--color-tfc-accent) !important;
+  font-family: var(--font-oswald) !important;
+  text-transform: uppercase !important;
+  border-radius: 0 !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+}
+
+button.cky-btn-accept:hover {
+  background-color: transparent !important;
+  color: var(--color-tfc-accent) !important;
+}
+
+/* Botón Rechazar todo (Secundario/Outline) */
+button.cky-btn-reject {
+  background-color: transparent !important;
+  color: var(--color-tfc-accent) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  font-family: var(--font-oswald) !important;
+  text-transform: uppercase !important;
+  border-radius: 0 !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+}
+
+button.cky-btn-reject:hover {
+  border-color: var(--color-tfc-accent) !important;
+  background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Botón Personalizar (Texto) */
+button.cky-btn-customize {
+  color: var(--color-tfc-text-muted) !important;
+  font-family: var(--font-sans) !important;
+  text-decoration: underline !important;
+  font-size: 0.85rem !important;
+}
+
+button.cky-btn-customize:hover {
+  color: var(--color-tfc-accent) !important;
+}
+
+/* Icono flotante (Badge) para volver a abrir preferencias */
+.cky-revisit-bottom-left {
+  bottom: 20px !important;
+  left: 20px !important;
+}
+
+.cky-revisit-btn {
+  background-color: var(--color-tfc-dark) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.cky-revisit-btn img {
+  filter: grayscale(100%) brightness(200%) !important; /* Icono blanco */
+}
+
+/* Preferencias modal */
+.cky-preference-center {
+  background-color: var(--color-tfc-black) !important;
+  color: var(--color-tfc-accent) !important;
+}
+
+.cky-preference-header, .cky-preference-body-wrapper {
+  background-color: var(--color-tfc-black) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.cky-preference-title {
+  color: var(--color-tfc-accent) !important;
+  font-family: var(--font-oswald) !important;
+}
+
+.cky-switch input:checked + span {
+  background-color: var(--color-tfc-accent) !important;
+}
