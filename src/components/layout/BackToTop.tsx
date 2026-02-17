@@ -27,8 +27,8 @@ export const BackToTop = () => {
     };
 
     // SVG Circle properties for 44px size
-    // Center 22, 22. Radius ~19 to fit within 44px.
-    const radius = 19;
+    // Center 22, 22. Radius 15 (Diameter 30) to give ~7px padding from the edge.
+    const radius = 15;
     const circumference = 2 * Math.PI * radius;
     const strokeDashoffset = circumference - (progress / 100) * circumference;
 
