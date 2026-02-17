@@ -26,33 +26,34 @@ export const BackToTop = () => {
         });
     };
 
-    // SVG Circle properties
-    const radius = 18;
+    // SVG Circle properties for 50px size
+    // Center 25, 25. Radius ~22 to fit within 50px.
+    const radius = 22;
     const circumference = 2 * Math.PI * radius;
     const strokeDashoffset = circumference - (progress / 100) * circumference;
 
     return (
         <button
             onClick={scrollToTop}
-            className={`fixed bottom-8 right-8 z-50 p-2 rounded-full bg-white text-black shadow-lg transition-all duration-500 transform hover:scale-110 group ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'
+            className={`fixed bottom-[20px] right-[20px] z-50 flex items-center justify-center w-[50px] h-[50px] rounded-full bg-[#121212] border border-white/20 text-white shadow-[0_4px_10px_rgba(0,0,0,0.5)] transition-all duration-500 transform hover:scale-105 group ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'
                 }`}
             aria-label="Volver arriba"
         >
-            <div className="relative flex items-center justify-center w-10 h-10">
+            <div className="relative flex items-center justify-center w-full h-full">
                 {/* Background Circle */}
-                <svg className="absolute w-full h-full -rotate-90">
+                <svg className="absolute w-full h-full -rotate-90" viewBox="0 0 50 50">
                     <circle
-                        cx="20"
-                        cy="20"
+                        cx="25"
+                        cy="25"
                         r={radius}
                         fill="none"
-                        stroke="#e5e7eb"
+                        stroke="rgba(255,255,255,0.1)"
                         strokeWidth="2"
                     />
                     {/* Progress Circle */}
                     <circle
-                        cx="20"
-                        cy="20"
+                        cx="25"
+                        cy="25"
                         r={radius}
                         fill="none"
                         stroke="currentColor"
@@ -62,7 +63,7 @@ export const BackToTop = () => {
                         strokeLinecap="round"
                     />
                 </svg>
-                <ChevronUp className="w-5 h-5" />
+                <ChevronUp className="w-6 h-6" />
             </div>
         </button>
     );
