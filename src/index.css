@@ -141,72 +141,35 @@ button.cky-btn-customize:hover {
 
 /* Force override for CookieYes Revisit Badge */
 
-/* Force override for CookieYes Revisit Badge - MAXIMUM SPECIFICITY */
-html body .cky-revisit-bottom-left {
+
+/* Custom CookieYes Revisit Badge */
+.cky-revisit-bottom-left {
   bottom: 20px !important;
   left: 20px !important;
   z-index: 2147483647 !important;
-  /* MacOS Int Max */
-  width: auto !important;
-  height: auto !important;
-  overflow: visible !important;
 }
 
-
-/* Force override for CookieYes Revisit Badge - NUCLEAR OPTION */
-/* Targeting both ID and Class for maximum coverage */
-#cky-revisit-btn,
-.cky-revisit-btn,
-html body .cky-revisit-bottom-left .cky-revisit-btn {
-  background-color: #ffffff !important;
-  background: #ffffff !important;
-  border: none !important;
+.cky-revisit-btn {
+  background-color: var(--color-tfc-dark) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
   border-radius: 50% !important;
-  width: 44px !important;
-  height: 44px !important;
-  min-width: 44px !important;
-  min-height: 44px !important;
+  width: 50px !important;
+  height: 50px !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3) !important;
-  position: relative !important;
-  /* Custom Cookie Icon - Black */
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23000000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5' /%3E%3Cpath d='M8.5 8.5v.01' /%3E%3Cpath d='M16 15.5v.01' /%3E%3Cpath d='M12 12v.01' /%3E%3Cpath d='M11 17v.01' /%3E%3Cpath d='M7 14v.01' /%3E%3C/svg%3E") !important;
+  /* Custom Cookie Icon - White */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5' /%3E%3Cpath d='M8.5 8.5v.01' /%3E%3Cpath d='M16 15.5v.01' /%3E%3Cpath d='M12 12v.01' /%3E%3Cpath d='M11 17v.01' /%3E%3Cpath d='M7 14v.01' /%3E%3C/svg%3E") !important;
   background-repeat: no-repeat !important;
   background-position: center !important;
-  background-size: 20px !important;
-  z-index: 999999 !important;
+  background-size: 28px !important;
+  /* Original larger icon size */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5) !important;
 }
 
-/* Hide ALL internal elements (original icon, images, svgs) */
-#cky-revisit-btn>*,
-.cky-revisit-btn>* {
+.cky-revisit-btn img,
+.cky-revisit-btn svg {
   display: none !important;
-  opacity: 0 !important;
-  visibility: hidden !important;
-  width: 0 !important;
-  height: 0 !important;
-}
-
-/* Inner ring to mimic BackToTop track */
-#cky-revisit-btn::after,
-.cky-revisit-btn::after,
-html body .cky-revisit-bottom-left .cky-revisit-btn::after {
-  content: "" !important;
-  position: absolute !important;
-  top: 50% !important;
-  left: 50% !important;
-  transform: translate(-50%, -50%) !important;
-  width: 30px !important;
-  height: 30px !important;
-  border-radius: 50% !important;
-  border: 2px solid #e5e7eb !important;
-  box-sizing: border-box !important;
-  pointer-events: none !important;
-  display: block !important;
-  background: transparent !important;
-  /* Ensure no background overrides */
 }
 
 body .cky-revisit-bottom-left .cky-revisit-btn img,
