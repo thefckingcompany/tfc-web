@@ -226,4 +226,9 @@ body .cky-revisit-bottom-left .cky-revisit-btn svg {
     bottom: calc(8rem + env(safe-area-inset-bottom) + 3rem) !important;
     /* ~11rem total */
   }
+
+  /* Add safe area padding to top navigation to avoid notch overlap */
+  nav {
+    padding-top: env(safe-area-inset-top) !important;
+  }
 }
