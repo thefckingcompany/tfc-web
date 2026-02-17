@@ -223,8 +223,8 @@ body .cky-revisit-bottom-left .cky-revisit-btn svg {
 
   /* Increase bottom spacing for scroll indicator on PWA (mobile app) mode */
   #pwa-scroll-indicator {
-    bottom: calc(8rem + env(safe-area-inset-bottom) + 5rem) !important;
-    /* ~13rem total */
+    bottom: calc(8rem + env(safe-area-inset-bottom) + 10rem) !important;
+    /* ~18rem total */
   }
 
   /* Add safe area padding to top navigation to avoid notch overlap */
