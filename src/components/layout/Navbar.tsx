@@ -42,13 +42,20 @@ export const Navbar = () => {
         ? 'bg-white text-black hover:bg-gray-200'
         : 'bg-black text-white hover:bg-gray-800';
 
+    const handleLogoClick = (e: React.MouseEvent) => {
+        if (location.pathname === '/') {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    };
+
     return (
         <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 border-b ${bgClass}`}>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-24">
 
                     {/* Logo */}
-                    <Link to="/" className="flex items-center gap-2 group">
+                    <Link to="/" className="flex items-center gap-2 group" onClick={handleLogoClick}>
                         <div className="flex flex-col items-center">
                             <span className={`text-2xl font-oswald font-bold tracking-tighter uppercase leading-none ${textColorClass}`}>
                                 The Fucking
@@ -102,14 +109,21 @@ export const Navbar = () => {
                         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                             <div className="flex items-center justify-between h-24">
                                 {/* Logo */}
-                                <div className="flex flex-col items-center" onClick={() => setIsOpen(false)}>
+                                <Link
+                                    to="/"
+                                    className="flex flex-col items-center"
+                                    onClick={(e) => {
+                                        setIsOpen(false);
+                                        handleLogoClick(e);
+                                    }}
+                                >
                                     <span className="text-2xl font-oswald font-bold tracking-tighter uppercase leading-none text-white">
                                         The Fucking
                                     </span>
                                     <span className="text-lg font-oswald uppercase tracking-[0.3em] leading-none opacity-80 text-white">
                                         Company
                                     </span>
-                                </div>
+                                </Link>
 
                                 {/* Close Button */}
                                 <div>
