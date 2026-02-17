@@ -153,12 +153,19 @@ html body .cky-revisit-bottom-left {
 }
 
 
+/* Force override for CookieYes Revisit Badge - NUCLEAR OPTION */
+/* Targeting both ID and Class for maximum coverage */
+#cky-revisit-btn,
+.cky-revisit-btn,
 html body .cky-revisit-bottom-left .cky-revisit-btn {
   background-color: #ffffff !important;
+  background: #ffffff !important;
   border: none !important;
   border-radius: 50% !important;
   width: 44px !important;
   height: 44px !important;
+  min-width: 44px !important;
+  min-height: 44px !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -169,9 +176,22 @@ html body .cky-revisit-bottom-left .cky-revisit-btn {
   background-repeat: no-repeat !important;
   background-position: center !important;
   background-size: 20px !important;
+  z-index: 999999 !important;
+}
+
+/* Hide ALL internal elements (original icon, images, svgs) */
+#cky-revisit-btn>*,
+.cky-revisit-btn>* {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  width: 0 !important;
+  height: 0 !important;
 }
 
 /* Inner ring to mimic BackToTop track */
+#cky-revisit-btn::after,
+.cky-revisit-btn::after,
 html body .cky-revisit-bottom-left .cky-revisit-btn::after {
   content: "" !important;
   position: absolute !important;
@@ -185,14 +205,8 @@ html body .cky-revisit-bottom-left .cky-revisit-btn::after {
   box-sizing: border-box !important;
   pointer-events: none !important;
   display: block !important;
-}
-
-html body .cky-revisit-bottom-left .cky-revisit-btn img,
-html body .cky-revisit-bottom-left .cky-revisit-btn svg {
-  display: none !important;
-  width: 0 !important;
-  height: 0 !important;
-  opacity: 0 !important;
+  background: transparent !important;
+  /* Ensure no background overrides */
 }
 
 body .cky-revisit-bottom-left .cky-revisit-btn img,
