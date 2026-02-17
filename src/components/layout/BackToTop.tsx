@@ -26,25 +26,25 @@ export const BackToTop = () => {
         });
     };
 
-    // SVG Circle properties for 50px size
-    // Center 25, 25. Radius ~22 to fit within 50px.
-    const radius = 22;
+    // SVG Circle properties for 44px size
+    // Center 22, 22. Radius ~19 to fit within 44px.
+    const radius = 19;
     const circumference = 2 * Math.PI * radius;
     const strokeDashoffset = circumference - (progress / 100) * circumference;
 
     return (
         <button
             onClick={scrollToTop}
-            className={`fixed bottom-[20px] right-[20px] z-50 flex items-center justify-center w-[50px] h-[50px] rounded-full bg-white text-black shadow-[0_4px_10px_rgba(0,0,0,0.3)] transition-all duration-500 transform hover:scale-105 group ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-90 pointer-events-none'
+            className={`fixed bottom-[20px] right-[20px] z-50 flex items-center justify-center w-[44px] h-[44px] rounded-full bg-white text-black shadow-[0_4px_10px_rgba(0,0,0,0.3)] transition-all duration-500 transform hover:scale-105 group ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-90 pointer-events-none'
                 }`}
             aria-label="Volver arriba"
         >
             <div className="relative flex items-center justify-center w-full h-full">
                 {/* Background Circle */}
-                <svg className="absolute w-full h-full -rotate-90" viewBox="0 0 50 50">
+                <svg className="absolute w-full h-full -rotate-90" viewBox="0 0 44 44">
                     <circle
-                        cx="25"
-                        cy="25"
+                        cx="22"
+                        cy="22"
                         r={radius}
                         fill="none"
                         stroke="#e5e7eb"
@@ -52,8 +52,8 @@ export const BackToTop = () => {
                     />
                     {/* Progress Circle */}
                     <circle
-                        cx="25"
-                        cy="25"
+                        cx="22"
+                        cy="22"
                         r={radius}
                         fill="none"
                         stroke="currentColor"
