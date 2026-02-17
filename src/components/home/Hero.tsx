@@ -54,7 +54,7 @@ export const Hero = () => {
             </div>
 
             {/* Scroll Indicator */}
-            <div id="pwa-scroll-indicator" className="absolute bottom-32 left-1/2 transform -translate-x-1/2 text-white animate-bounce opacity-50 flex flex-col items-center">
+            <div id="pwa-scroll-indicator" className="absolute bottom-44 left-1/2 transform -translate-x-1/2 text-white animate-bounce opacity-50 flex flex-col items-center z-20">
                 <span className="text-xs uppercase tracking-widest">Scroll</span>
                 <ChevronDown className="mt-2" size={24} />
             </div>
