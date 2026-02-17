@@ -35,7 +35,7 @@ export const BackToTop = () => {
     return (
         <button
             onClick={scrollToTop}
-            className={`fixed bottom-[20px] right-[20px] z-50 flex items-center justify-center w-[50px] h-[50px] rounded-full bg-white text-black shadow-[0_4px_10px_rgba(0,0,0,0.3)] transition-all duration-500 transform hover:scale-105 group ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'
+            className={`fixed bottom-[20px] right-[20px] z-50 flex items-center justify-center w-[50px] h-[50px] rounded-full bg-white text-black shadow-[0_4px_10px_rgba(0,0,0,0.3)] transition-all duration-500 transform hover:scale-105 group ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-90 pointer-events-none'
                 }`}
             aria-label="Volver arriba"
         >
