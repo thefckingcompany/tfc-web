@@ -6,7 +6,7 @@ export const Footer = () => {
     return (
         <footer className="bg-black pt-20 pb-10 text-white border-t border-white/10">
             <div className="max-w-7xl mx-auto px-10 sm:px-8 lg:px-8">
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-8">
 
                     {/* Brand */}
                     <div className="space-y-6">
@@ -117,7 +117,7 @@ export const Footer = () => {
                     </div>
                 </div>
 
-                <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
+                <div className="flex flex-col md:flex-row justify-between items-center gap-4">
                     <p className="text-gray-700 text-[10px] text-center md:text-left uppercase tracking-widest font-sans">
                         &copy; {new Date().getFullYear()} The Fucking Company. All Rights Reserved.
                     </p>
