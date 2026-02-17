@@ -103,6 +103,23 @@ button.cky-btn-reject:hover {
   background-color: rgba(255, 255, 255, 0.05) !important;
 }
 
+/* Botón Guardar mis preferencias (Preferencias) */
+button.cky-btn-preferences {
+  background-color: transparent !important;
+  color: var(--color-tfc-accent) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  font-family: var(--font-oswald) !important;
+  text-transform: uppercase !important;
+  border-radius: 0 !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+}
+
+button.cky-btn-preferences:hover {
+  border-color: var(--color-tfc-accent) !important;
+  background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
 /* Botón Personalizar (Texto) */
 button.cky-btn-customize {
   color: var(--color-tfc-text-muted) !important;
@@ -127,7 +144,8 @@ button.cky-btn-customize:hover {
 }
 
 .cky-revisit-btn img {
-  filter: grayscale(100%) brightness(200%) !important; /* Icono blanco */
+  filter: grayscale(100%) brightness(200%) !important;
+  /* Icono blanco */
 }
 
 /* Preferencias modal */
@@ -136,7 +154,8 @@ button.cky-btn-customize:hover {
   color: var(--color-tfc-accent) !important;
 }
 
-.cky-preference-header, .cky-preference-body-wrapper {
+.cky-preference-header,
+.cky-preference-body-wrapper {
   background-color: var(--color-tfc-black) !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
 }
@@ -146,6 +165,6 @@ button.cky-btn-customize:hover {
   font-family: var(--font-oswald) !important;
 }
 
-.cky-switch input:checked + span {
+.cky-switch input:checked+span {
   background-color: var(--color-tfc-accent) !important;
 }
