@@ -8,12 +8,12 @@ const Privacy = () => {
     }, []);
 
     return (
-        <div className="bg-white text-black min-h-screen pt-24 pb-20 font-sans">
+        <div className="bg-white text-black min-h-screen pt-16 pb-20 font-sans">
             <div className="max-w-3xl mx-auto px-6 lg:px-8">
                 {/* Back Button */}
                 <Link
                     to="/"
-                    className="inline-flex items-center text-xs font-bold uppercase tracking-widest mb-12 text-gray-500 hover:text-black transition-colors"
+                    className="inline-flex items-center text-xs font-bold uppercase tracking-widest mb-6 text-gray-500 hover:text-black transition-colors"
                 >
                     <ArrowLeft className="mr-2" size={14} /> Volver al inicio
                 </Link>
