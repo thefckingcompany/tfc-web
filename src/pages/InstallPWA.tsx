@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const InstallPWA = () => {
     return (
-        <div className="min-h-screen bg-white text-black pt-8 pb-20 px-6">
+        <div className="bg-white text-black pt-8 pb-8 px-6">
             <div className="max-w-md mx-auto">
                 <Link to="/" className="inline-flex items-center text-sm font-bold uppercase tracking-widest mb-8 hover:text-gray-600 transition-colors">
                     <ArrowLeft className="mr-2" size={16} /> Volver
