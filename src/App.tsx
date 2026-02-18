@@ -9,6 +9,7 @@ import Team from './pages/Team';
 import Contact from './pages/Contact';
 
 import Gallery from './pages/Gallery';
+import InstallPWA from './pages/InstallPWA';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/galeria" element={<Gallery />} />
           <Route path="/blog" element={<div className="min-h-[60vh] flex items-center justify-center text-4xl font-oswald text-white">BLOG (Próximamente)</div>} />
           <Route path="/contacto" element={<Contact />} />
+          <Route path="/instalar-app" element={<InstallPWA />} />
         </Routes>
       </MainLayout>
     </Router>
