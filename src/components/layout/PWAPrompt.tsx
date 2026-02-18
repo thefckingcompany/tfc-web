@@ -1,8 +1,11 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { Download } from "lucide-react";
 
 export const PWAPrompt = () => {
     const navigate = useNavigate();
+    const location = useLocation();
+
+    if (location.pathname === '/instalar-app') return null;
 
     return (
         <div className="md:hidden bg-gray-50 border-t border-gray-200 py-6 px-6 text-center">
