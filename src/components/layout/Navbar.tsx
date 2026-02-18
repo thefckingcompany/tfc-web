@@ -164,6 +164,32 @@ export const Navbar = () => {
                                 {link.name}
                             </Link>
                         ))}
+
+                        {/* Social Media Icons moved here */}
+                        <div className="flex justify-center gap-8 py-4">
+                            <a
+                                href="https://wa.me/34664194168"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-white hover:text-green-400 transition-colors"
+                            >
+                                <WhatsAppIcon size={24} />
+                            </a>
+                            <a
+                                href="https://www.instagram.com/thefucking.company/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-white hover:text-pink-400 transition-colors"
+                            >
+                                <Instagram size={24} />
+                            </a>
+                            <a
+                                href="tel:+34664194168"
+                                className="text-white hover:text-blue-400 transition-colors"
+                            >
+                                <Phone size={24} />
+                            </a>
+                        </div>
                         <Link
                             to="/reservar"
                             onClick={() => setIsOpen(false)}
@@ -176,14 +202,14 @@ export const Navbar = () => {
                             <Link
                                 to="/instalar-app"
                                 onClick={() => setIsOpen(false)}
-                                className="w-full max-w-xs py-3 border border-white/30 text-white text-center font-oswald font-bold tracking-widest uppercase hover:bg-white/10 transition-colors text-sm"
+                                className="w-full max-w-[200px] py-3 border border-white/30 text-white text-center font-oswald font-bold tracking-widest uppercase hover:bg-white/10 transition-colors text-xs"
                             >
                                 Instala App
                             </Link>
                             <Link
                                 to="/mejorar-web"
                                 onClick={() => setIsOpen(false)}
-                                className="w-full max-w-xs py-3 bg-white/5 border border-white/10 text-white text-center font-sans font-bold tracking-widest uppercase hover:bg-white/10 transition-colors text-[10px] flex items-center justify-center gap-2"
+                                className="w-full max-w-[200px] py-2 bg-white/5 border border-white/10 text-white text-center font-sans font-bold tracking-widest uppercase hover:bg-white/10 transition-colors text-[9px] flex items-center justify-center gap-2"
                             >
                                 <span className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span>
                                 ¿Algo falla o mejorarías en la web?
@@ -192,33 +218,11 @@ export const Navbar = () => {
                     </div>
 
                     {/* Social Media Footer */}
-                    <div className="pb-10 flex justify-center gap-8 shrink-0">
-                        <a
-                            href="https://wa.me/34664194168"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-white hover:text-green-400 transition-colors"
-                        >
-                            <WhatsAppIcon size={32} />
-                        </a>
-                        <a
-                            href="https://www.instagram.com/thefucking.company/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-white hover:text-pink-400 transition-colors"
-                        >
-                            <Instagram size={32} />
-                        </a>
-                        <a
-                            href="tel:+34664194168"
-                            className="text-white hover:text-blue-400 transition-colors"
-                        >
-                            <Phone size={32} />
-                        </a>
-                    </div>
+
                 </div>,
                 document.body
-            )}
-        </nav>
+            )
+            }
+        </nav >
     );
 };
