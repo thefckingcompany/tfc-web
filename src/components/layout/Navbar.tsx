@@ -200,7 +200,7 @@ export const Navbar = () => {
                             </a>
                         </div>
 
-                        <div className="flex flex-col items-center gap-6 mt-4 w-full px-8">
+                        <div className="flex flex-col items-center gap-6 mt-0 w-full px-8">
                             <Link
                                 to="/instalar-app"
                                 onClick={() => setIsOpen(false)}
