@@ -165,7 +165,7 @@ export const Navbar = () => {
                     </div>
 
                     {/* Navigation Links */}
-                    <div className={`flex-grow flex flex-col items-center space-y-4 overflow-y-auto ${isPWA ? 'justify-center' : 'justify-end pb-8'}`}>
+                    <div className={`flex-grow flex flex-col items-center space-y-4 overflow-y-auto ${isPWA ? 'justify-center relative' : 'justify-end pb-8'}`}>
                         {navLinks.map((link) => (
                             <Link
                                 key={link.name}
@@ -212,7 +212,7 @@ export const Navbar = () => {
                             </a>
                         </div>
 
-                        <div className="flex flex-col items-center gap-6 mt-0 w-full px-8">
+                        <div className={`flex flex-col items-center gap-6 w-full px-8 ${isPWA ? 'absolute bottom-8' : 'mt-0'}`}>
                             {!isPWA && (
                                 <Link
                                     to="/instalar-app"
