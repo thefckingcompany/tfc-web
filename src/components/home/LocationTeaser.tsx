@@ -7,14 +7,14 @@ export const LocationTeaser = () => {
             <div className="max-w-2xl mx-auto px-10 sm:px-8 lg:px-8">
 
                 {/* Header Centered */}
-                <div className="text-center mb-12 animate-fade-in-up">
+                <div className="text-center mb-8 animate-fade-in-up">
                     <p className="font-script text-2xl text-gray-500 mb-2">Visítanos</p>
                     <h2 className="text-3xl sm:text-4xl md:text-6xl font-oswald font-bold uppercase tracking-tighter text-black">
                         Contacto
                     </h2>
                 </div>
 
-                <div className="flex flex-col gap-12">
+                <div className="flex flex-col gap-6">
 
                     {/* Dirección */}
                     <div className="group border-b border-gray-200 pb-8">
