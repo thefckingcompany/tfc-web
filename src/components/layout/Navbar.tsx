@@ -166,7 +166,16 @@ export const Navbar = () => {
                         ))}
 
                         {/* Social Media Icons moved here */}
-                        <div className="flex justify-center gap-8 py-4">
+                        <Link
+                            to="/reservar"
+                            onClick={() => setIsOpen(false)}
+                            className="mt-8 px-12 py-4 bg-white text-black font-oswald font-bold tracking-widest uppercase hover:bg-gray-200 transition-colors"
+                        >
+                            Reservar Cita
+                        </Link>
+
+                        {/* Social Media Icons moved here */}
+                        <div className="flex justify-center gap-8 py-6">
                             <a
                                 href="https://wa.me/34664194168"
                                 target="_blank"
@@ -190,15 +199,8 @@ export const Navbar = () => {
                                 <Phone size={24} />
                             </a>
                         </div>
-                        <Link
-                            to="/reservar"
-                            onClick={() => setIsOpen(false)}
-                            className="mt-8 px-12 py-4 bg-white text-black font-oswald font-bold tracking-widest uppercase hover:bg-gray-200 transition-colors"
-                        >
-                            Reservar Cita
-                        </Link>
 
-                        <div className="flex flex-col items-center gap-3 mt-6 w-full px-8">
+                        <div className="flex flex-col items-center gap-3 w-full px-8">
                             <Link
                                 to="/instalar-app"
                                 onClick={() => setIsOpen(false)}
