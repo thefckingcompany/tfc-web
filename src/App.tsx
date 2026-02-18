@@ -11,6 +11,7 @@ import Contact from './pages/Contact';
 import Gallery from './pages/Gallery';
 import InstallPWA from './pages/InstallPWA';
 import WebFeedback from './pages/WebFeedback';
+import Privacy from './pages/Privacy';
 
 function App() {
   return (
@@ -28,6 +29,8 @@ function App() {
           <Route path="/contacto" element={<Contact />} />
           <Route path="/instalar-app" element={<InstallPWA />} />
           <Route path="/mejorar-web" element={<WebFeedback />} />
+          <Route path="/privacidad" element={<Privacy />} />
+          <Route path="/legal" element={<Privacy />} />
         </Routes>
       </MainLayout>
     </Router>
