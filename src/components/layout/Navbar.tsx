@@ -171,6 +171,24 @@ export const Navbar = () => {
                         >
                             Reservar Cita
                         </Link>
+
+                        <div className="flex flex-col items-center gap-4 mt-8 w-full px-8">
+                            <Link
+                                to="/instalar-app"
+                                onClick={() => setIsOpen(false)}
+                                className="w-full max-w-xs py-3 border border-white/30 text-white text-center font-oswald font-bold tracking-widest uppercase hover:bg-white/10 transition-colors text-sm"
+                            >
+                                Instala App
+                            </Link>
+                            <Link
+                                to="/mejorar-web"
+                                onClick={() => setIsOpen(false)}
+                                className="w-full max-w-xs py-3 bg-white/5 border border-white/10 text-white text-center font-sans font-bold tracking-widest uppercase hover:bg-white/10 transition-colors text-[10px] flex items-center justify-center gap-2"
+                            >
+                                <span className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span>
+                                ¿Algo falla o mejorarías en la web?
+                            </Link>
+                        </div>
                     </div>
 
                     {/* Social Media Footer */}
