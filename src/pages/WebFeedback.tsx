@@ -41,12 +41,7 @@ const WebFeedback = () => {
                         </div>
                         <h3 className="text-xl font-oswald font-bold uppercase mb-2">¡Gracias!</h3>
                         <p className="text-gray-600 text-sm">Tu comentario ha sido recibido. Trabajaremos en ello.</p>
-                        <button
-                            onClick={() => setSubmitted(false)}
-                            className="mt-6 text-xs font-bold uppercase tracking-widest underline hover:text-gray-900"
-                        >
-                            Enviar otro mensaje
-                        </button>
+
                     </div>
                 ) : (
                     <form onSubmit={handleSubmit} className="space-y-6">
