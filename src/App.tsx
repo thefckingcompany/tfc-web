@@ -7,11 +7,12 @@ import Services from './pages/Services';
 import Booking from './pages/Booking';
 import Team from './pages/Team';
 import Contact from './pages/Contact';
-
 import Gallery from './pages/Gallery';
 import InstallPWA from './pages/InstallPWA';
 import WebFeedback from './pages/WebFeedback';
 import Privacy from './pages/Privacy';
+
+import Legal from './pages/Legal';
 
 function App() {
   return (
@@ -30,7 +31,7 @@ function App() {
           <Route path="/instalar-app" element={<InstallPWA />} />
           <Route path="/mejorar-web" element={<WebFeedback />} />
           <Route path="/privacidad" element={<Privacy />} />
-          <Route path="/legal" element={<Privacy />} />
+          <Route path="/legal" element={<Legal />} />
         </Routes>
       </MainLayout>
     </Router>
