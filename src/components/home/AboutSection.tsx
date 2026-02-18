@@ -23,7 +23,7 @@ export const AboutSection = () => {
                             <img
                                 src="/ft-nosotros-tfc.jpg"
                                 alt="Barbero trabajando"
-                                className="w-full h-full object-cover grayscale contrast-125 transition-transform duration-700 group-hover:scale-105"
+                                className="w-full h-full object-cover grayscale contrast-125 transition-transform duration-700 scale-[1.02] group-hover:scale-105"
                             />
                         </div>
                     </div>
