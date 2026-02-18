@@ -124,6 +124,7 @@ export const Footer = () => {
                     <div className="flex gap-6">
                         <Link to="/privacidad" className="text-gray-700 hover:text-gray-400 text-[10px] uppercase tracking-widest transition-colors font-sans">Privacy</Link>
                         <Link to="/legal" className="text-gray-700 hover:text-gray-400 text-[10px] uppercase tracking-widest transition-colors font-sans">Terms</Link>
+                        <Link to="/mejorar-web" className="text-gray-700 hover:text-gray-400 text-[10px] uppercase tracking-widest transition-colors font-sans border-l border-gray-800 pl-6">Feedback</Link>
                     </div>
                 </div>
             </div>
