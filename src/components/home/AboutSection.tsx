@@ -8,14 +8,14 @@ export const AboutSection = () => {
             <div className="max-w-7xl mx-auto px-10 sm:px-8 lg:px-8">
 
                 {/* Header Centered - Matching LocationTeaser/TeamTeaser style */}
-                <div className="text-center mb-10 animate-fade-in-up">
+                <div className="text-center mb-6 animate-fade-in-up">
                     <p className="font-script text-2xl text-gray-500 mb-2">Nuestra Historia</p>
                     <h2 className="text-3xl sm:text-4xl md:text-6xl font-oswald font-bold uppercase tracking-tighter text-black">
                         NOSOTROS
                     </h2>
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20 items-center">
 
                     {/* Image Column */}
                     <div className="relative group animate-fade-in-left">
