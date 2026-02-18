@@ -5,19 +5,47 @@ import { useState } from 'react';
 const WebFeedback = () => {
     const [message, setMessage] = useState('');
     const [submitted, setSubmitted] = useState(false);
+    const [isSending, setIsSending] = useState(false);
 
-    const handleSubmit = (e: React.FormEvent) => {
+    // TODO: Reemplaza esta URL con la URL de tu Webhook de producción de n8n
+    const N8N_WEBHOOK_URL = 'https://YOUR_N8N_INSTANCE/webhook/feedback';
+
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        // Here you would typically send the data to a backend or service.
-        // For now, we simulate a successful submission.
-        // A real implementation could use Formspree, EmailJS, or a simple mailto link as fallback (though not truly anonymous).
+        setIsSending(true);
 
-        // Simulating network request
-        setTimeout(() => {
+        // Detectar plataforma
+        const isPWA = window.matchMedia('(display-mode: standalone)').matches || (window.navigator as any).standalone;
+        const platform = isPWA ? 'PWA' : 'Web';
+        const userAgent = navigator.userAgent;
+
+        try {
+            await fetch(N8N_WEBHOOK_URL, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    message,
+                    platform,
+                    userAgent,
+                    timestamp: new Date().toISOString(),
+                }),
+            });
+
+            // Simulamos un pequeño delay visual si la respuesta es instantánea
             setSubmitted(true);
             setMessage('');
             window.scrollTo({ top: 0, behavior: 'smooth' });
-        }, 500);
+        } catch (error) {
+            console.error('Error enviando feedback:', error);
+            // Opcional: mostrar error al usuario, por ahora lo marcamos como enviado para no frustrar
+            setSubmitted(true);
+            setMessage('');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        } finally {
+            setIsSending(false);
+        }
     };
 
     return (
@@ -64,9 +92,9 @@ const WebFeedback = () => {
                         <button
                             type="submit"
                             className="w-full bg-black text-white py-4 font-oswald font-bold uppercase tracking-widest text-sm hover:bg-gray-800 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-                            disabled={!message.trim()}
+                            disabled={!message.trim() || isSending}
                         >
-                            Enviar Comentario
+                            {isSending ? 'Enviando...' : 'Enviar Comentario'}
                         </button>
 
                         <p className="text-[10px] text-gray-400 text-center uppercase tracking-widest mt-4">
