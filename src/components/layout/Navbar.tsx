@@ -193,7 +193,7 @@ export const Navbar = () => {
                         <Link
                             to="/reservar"
                             onClick={() => setIsOpen(false)}
-                            className="mt-6 px-12 py-3 bg-white text-black font-oswald font-bold tracking-widest uppercase hover:bg-gray-200 transition-colors text-sm"
+                            className="mt-8 px-12 py-4 bg-white text-black font-oswald font-bold tracking-widest uppercase hover:bg-gray-200 transition-colors"
                         >
                             Reservar Cita
                         </Link>
