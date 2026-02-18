@@ -121,10 +121,13 @@ export const Footer = () => {
                     <p className="text-gray-700 text-[10px] text-center md:text-left uppercase tracking-widest font-sans">
                         &copy; {new Date().getFullYear()} The Fucking Company. All Rights Reserved.
                     </p>
-                    <div className="flex gap-6">
+                    <div className="flex flex-wrap justify-center gap-6">
                         <Link to="/privacidad" className="text-gray-700 hover:text-gray-400 text-[10px] uppercase tracking-widest transition-colors font-sans">Privacy</Link>
                         <Link to="/legal" className="text-gray-700 hover:text-gray-400 text-[10px] uppercase tracking-widest transition-colors font-sans">Terms</Link>
-                        <Link to="/mejorar-web" className="text-gray-700 hover:text-gray-400 text-[10px] uppercase tracking-widest transition-colors font-sans border-l border-gray-800 pl-6">Feedback</Link>
+                        <Link to="/mejorar-web" className="flex items-center gap-2 bg-white/10 hover:bg-white/20 border border-white/10 px-4 py-2 text-[10px] text-white uppercase tracking-widest transition-all font-sans">
+                            <span className="w-1 h-1 bg-green-500 rounded-full animate-pulse"></span>
+                            ¿Algo falla o mejorarías en la web?
+                        </Link>
                     </div>
                 </div>
             </div>
