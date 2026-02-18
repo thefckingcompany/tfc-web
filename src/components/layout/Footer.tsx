@@ -6,7 +6,7 @@ export const Footer = () => {
     return (
         <footer className="bg-black pt-12 pb-10 text-white border-t border-white/10">
             <div className="max-w-7xl mx-auto px-10 sm:px-8 lg:px-8">
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-8">
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
 
                     {/* Brand */}
                     <div className="space-y-6">
@@ -36,8 +36,8 @@ export const Footer = () => {
 
                     {/* Links */}
                     <div>
-                        <h3 className="text-sm font-oswald font-bold uppercase tracking-[0.2em] mb-8 text-white">Menú</h3>
-                        <ul className="space-y-4">
+                        <h3 className="text-sm font-oswald font-bold uppercase tracking-[0.2em] mb-4 text-white">Menú</h3>
+                        <ul className="space-y-2">
                             {[
                                 { name: 'Inicio', path: '/' },
                                 { name: 'Nosotros', path: '/nosotros' },
@@ -58,8 +58,8 @@ export const Footer = () => {
 
                     {/* Contact */}
                     <div>
-                        <h3 className="text-sm font-oswald font-bold uppercase tracking-[0.2em] mb-8 text-white">Ubicación</h3>
-                        <ul className="space-y-4">
+                        <h3 className="text-sm font-oswald font-bold uppercase tracking-[0.2em] mb-4 text-white">Ubicación</h3>
+                        <ul className="space-y-2">
                             <li>
                                 <a
                                     href="https://google.com/maps?ll=28.07699,-16.55746&z=19&t=h&hl=es&gl=ES&mapclient=embed&q=C.+Princesa+Ifara,+5+38611+San+Isidro+Santa+Cruz+de+Tenerife"
@@ -94,8 +94,8 @@ export const Footer = () => {
 
                     {/* Hours */}
                     <div>
-                        <h3 className="text-sm font-oswald font-bold uppercase tracking-[0.2em] mb-8 text-white">Horario</h3>
-                        <ul className="space-y-3">
+                        <h3 className="text-sm font-oswald font-bold uppercase tracking-[0.2em] mb-4 text-white">Horario</h3>
+                        <ul className="space-y-2">
                             <li className="flex justify-between text-xs font-sans text-gray-500 tracking-wide border-b border-white/10 pb-2">
                                 <span>Lun - Vie</span>
                                 <span className="text-white">10am - 8pm</span>
