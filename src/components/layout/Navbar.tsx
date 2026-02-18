@@ -153,7 +153,7 @@ export const Navbar = () => {
                     </div>
 
                     {/* Navigation Links */}
-                    <div className="flex-grow flex flex-col items-center justify-end space-y-4 overflow-y-auto pb-24">
+                    <div className="flex-grow flex flex-col items-center justify-center space-y-4 overflow-y-auto">
                         {navLinks.map((link) => (
                             <Link
                                 key={link.name}
@@ -169,7 +169,7 @@ export const Navbar = () => {
                         <Link
                             to="/reservar"
                             onClick={() => setIsOpen(false)}
-                            className="mt-8 px-12 py-4 bg-white text-black font-oswald font-bold tracking-widest uppercase hover:bg-gray-200 transition-colors"
+                            className="mt-6 px-12 py-4 bg-white text-black font-oswald font-bold tracking-widest uppercase hover:bg-gray-200 transition-colors"
                         >
                             Reservar Cita
                         </Link>
@@ -182,7 +182,7 @@ export const Navbar = () => {
                                 rel="noopener noreferrer"
                                 className="text-white hover:text-green-400 transition-colors"
                             >
-                                <WhatsAppIcon size={32} />
+                                <WhatsAppIcon size={24} />
                             </a>
                             <a
                                 href="https://www.instagram.com/thefucking.company/"
@@ -190,13 +190,13 @@ export const Navbar = () => {
                                 rel="noopener noreferrer"
                                 className="text-white hover:text-pink-400 transition-colors"
                             >
-                                <Instagram size={32} />
+                                <Instagram size={24} />
                             </a>
                             <a
                                 href="tel:+34664194168"
                                 className="text-white hover:text-blue-400 transition-colors"
                             >
-                                <Phone size={32} />
+                                <Phone size={24} />
                             </a>
                         </div>
 
