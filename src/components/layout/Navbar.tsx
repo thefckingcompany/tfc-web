@@ -153,7 +153,7 @@ export const Navbar = () => {
                     </div>
 
                     {/* Navigation Links */}
-                    <div className="flex-grow flex flex-col items-center justify-center space-y-4 overflow-y-auto">
+                    <div className="flex-grow flex flex-col items-center justify-end space-y-4 overflow-y-auto pb-8">
                         {navLinks.map((link) => (
                             <Link
                                 key={link.name}
@@ -182,7 +182,7 @@ export const Navbar = () => {
                                 rel="noopener noreferrer"
                                 className="text-white hover:text-green-400 transition-colors"
                             >
-                                <WhatsAppIcon size={24} />
+                                <WhatsAppIcon size={32} />
                             </a>
                             <a
                                 href="https://www.instagram.com/thefucking.company/"
@@ -190,13 +190,13 @@ export const Navbar = () => {
                                 rel="noopener noreferrer"
                                 className="text-white hover:text-pink-400 transition-colors"
                             >
-                                <Instagram size={24} />
+                                <Instagram size={32} />
                             </a>
                             <a
                                 href="tel:+34664194168"
                                 className="text-white hover:text-blue-400 transition-colors"
                             >
-                                <Phone size={24} />
+                                <Phone size={32} />
                             </a>
                         </div>
 
