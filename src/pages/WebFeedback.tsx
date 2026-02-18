@@ -16,8 +16,15 @@ const WebFeedback = () => {
 
         // Detectar plataforma
         const isPWA = window.matchMedia('(display-mode: standalone)').matches || (window.navigator as any).standalone;
-        const platform = isPWA ? 'PWA' : 'Web';
+
         const userAgent = navigator.userAgent;
+
+        let platform = 'Ordenador';
+        if (isPWA) {
+            platform = 'PWA';
+        } else if (/Mobi|Android/i.test(userAgent)) {
+            platform = 'Móvil';
+        }
 
         try {
             await fetch(N8N_WEBHOOK_URL, {
