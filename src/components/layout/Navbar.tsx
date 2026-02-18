@@ -19,6 +19,18 @@ export const Navbar = () => {
     const isHome = location.pathname === '/';
     const [scrolled, setScrolled] = useState(false);
 
+    const [isPWA, setIsPWA] = useState(false);
+
+    useEffect(() => {
+        const checkPWA = () => {
+            const isStandalone = window.matchMedia('(display-mode: standalone)').matches || (window.navigator as any).standalone;
+            setIsPWA(!!isStandalone);
+        };
+        checkPWA();
+        window.matchMedia('(display-mode: standalone)').addEventListener('change', checkPWA);
+        return () => window.matchMedia('(display-mode: standalone)').removeEventListener('change', checkPWA);
+    }, []);
+
     useEffect(() => {
         const handleScroll = () => setScrolled(window.scrollY > 50);
         window.addEventListener('scroll', handleScroll);
@@ -153,7 +165,7 @@ export const Navbar = () => {
                     </div>
 
                     {/* Navigation Links */}
-                    <div className="flex-grow flex flex-col items-center justify-end space-y-4 overflow-y-auto pb-8">
+                    <div className={`flex-grow flex flex-col items-center space-y-4 overflow-y-auto ${isPWA ? 'justify-center' : 'justify-end pb-8'}`}>
                         {navLinks.map((link) => (
                             <Link
                                 key={link.name}
@@ -201,13 +213,15 @@ export const Navbar = () => {
                         </div>
 
                         <div className="flex flex-col items-center gap-6 mt-0 w-full px-8">
-                            <Link
-                                to="/instalar-app"
-                                onClick={() => setIsOpen(false)}
-                                className="w-full max-w-[200px] py-3 border border-white/30 text-white text-center font-oswald font-bold tracking-widest uppercase hover:bg-white/10 transition-colors text-xs"
-                            >
-                                Instala App
-                            </Link>
+                            {!isPWA && (
+                                <Link
+                                    to="/instalar-app"
+                                    onClick={() => setIsOpen(false)}
+                                    className="w-full max-w-[200px] py-3 border border-white/30 text-white text-center font-oswald font-bold tracking-widest uppercase hover:bg-white/10 transition-colors text-xs"
+                                >
+                                    Instala App
+                                </Link>
+                            )}
                             <Link
                                 to="/mejorar-web"
                                 onClick={() => setIsOpen(false)}
