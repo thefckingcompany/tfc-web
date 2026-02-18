@@ -15,11 +15,11 @@ export const AboutSection = () => {
                     </h2>
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-20 items-center">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20">
 
                     {/* Image Column */}
-                    <div className="relative group animate-fade-in-left lg:col-span-5">
-                        <div className="aspect-[4/5] overflow-hidden bg-gray-100">
+                    <div className="relative group animate-fade-in-left h-full">
+                        <div className="aspect-[4/5] lg:aspect-auto lg:h-full overflow-hidden bg-gray-100">
                             <img
                                 src="/ft-nosotros-tfc.jpg"
                                 alt="Barbero trabajando"
@@ -29,7 +29,7 @@ export const AboutSection = () => {
                     </div>
 
                     {/* Content Column */}
-                    <div className="animate-fade-in-right space-y-6 lg:col-span-7">
+                    <div className="animate-fade-in-right space-y-6 flex flex-col justify-center">
 
                         <div>
                             <span className="text-sm font-bold tracking-[0.2em] uppercase text-gray-400 mb-4 block font-oswald">
