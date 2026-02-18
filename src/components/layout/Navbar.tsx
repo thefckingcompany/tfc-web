@@ -16,7 +16,7 @@ const navLinks = [
 export const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const location = useLocation();
-    const isHome = location.pathname === '/';
+    const isHome = location.pathname === '/' || location.pathname === '/index.html';
     const [scrolled, setScrolled] = useState(false);
 
     useEffect(() => {
@@ -50,7 +50,7 @@ export const Navbar = () => {
     };
 
     return (
-        <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 border-b pwa-safe-top ${bgClass}`}>
+        <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 border-b ${bgClass}`}>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-24">
 
