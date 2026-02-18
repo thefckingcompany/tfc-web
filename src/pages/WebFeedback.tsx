@@ -16,6 +16,7 @@ const WebFeedback = () => {
         setTimeout(() => {
             setSubmitted(true);
             setMessage('');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }, 500);
     };
 
