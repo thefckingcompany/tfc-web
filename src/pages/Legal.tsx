@@ -89,7 +89,7 @@ const Legal = () => {
 
                 </div>
 
-                <div className="text-center mt-4 pb-4">
+                <div className="text-center mt-12 pb-4">
                     <Link to="/" className="inline-block px-8 py-3 bg-black text-white font-oswald font-bold uppercase tracking-widest text-xs hover:bg-gray-800 transition-colors">
                         Volver al Inicio
                     </Link>
