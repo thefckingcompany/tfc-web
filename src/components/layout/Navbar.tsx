@@ -153,13 +153,13 @@ export const Navbar = () => {
                     </div>
 
                     {/* Navigation Links */}
-                    <div className="flex-grow flex flex-col items-center justify-center space-y-6 overflow-y-auto">
+                    <div className="flex-grow flex flex-col items-center justify-center space-y-4 overflow-y-auto">
                         {navLinks.map((link) => (
                             <Link
                                 key={link.name}
                                 to={link.path}
                                 onClick={() => setIsOpen(false)}
-                                className="text-3xl font-oswald font-bold tracking-widest text-white hover:text-gray-400 uppercase transition-colors"
+                                className="text-2xl font-oswald font-bold tracking-widest text-white hover:text-gray-400 uppercase transition-colors"
                             >
                                 {link.name}
                             </Link>
@@ -167,12 +167,12 @@ export const Navbar = () => {
                         <Link
                             to="/reservar"
                             onClick={() => setIsOpen(false)}
-                            className="mt-8 px-12 py-4 bg-white text-black font-oswald font-bold tracking-widest uppercase hover:bg-gray-200 transition-colors"
+                            className="mt-6 px-12 py-3 bg-white text-black font-oswald font-bold tracking-widest uppercase hover:bg-gray-200 transition-colors text-sm"
                         >
                             Reservar Cita
                         </Link>
 
-                        <div className="flex flex-col items-center gap-4 mt-8 w-full px-8">
+                        <div className="flex flex-col items-center gap-3 mt-6 w-full px-8">
                             <Link
                                 to="/instalar-app"
                                 onClick={() => setIsOpen(false)}
