@@ -113,6 +113,10 @@ export const Footer = () => {
                             <Link to="/reservar" className="block w-full py-3 bg-white text-black text-center font-oswald font-bold text-xs uppercase tracking-[0.2em] hover:bg-gray-200 transition-colors">
                                 Reservar Cita
                             </Link>
+                            <Link to="/mejorar-web" className="mt-4 flex items-center justify-center gap-2 text-[9px] text-gray-500 hover:text-white uppercase tracking-widest transition-all font-sans">
+                                <span className="w-1 h-1 bg-green-500 rounded-full animate-pulse"></span>
+                                ¿Algo falla o mejorarías en la web?
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -124,10 +128,6 @@ export const Footer = () => {
                     <div className="flex flex-wrap justify-center gap-6">
                         <Link to="/privacidad" className="text-gray-700 hover:text-gray-400 text-[10px] uppercase tracking-widest transition-colors font-sans">Privacy</Link>
                         <Link to="/legal" className="text-gray-700 hover:text-gray-400 text-[10px] uppercase tracking-widest transition-colors font-sans">Terms</Link>
-                        <Link to="/mejorar-web" className="flex items-center gap-2 bg-white/10 hover:bg-white/20 border border-white/10 px-4 py-2 text-[10px] text-white uppercase tracking-widest transition-all font-sans">
-                            <span className="w-1 h-1 bg-green-500 rounded-full animate-pulse"></span>
-                            ¿Algo falla o mejorarías en la web?
-                        </Link>
                     </div>
                 </div>
             </div>
