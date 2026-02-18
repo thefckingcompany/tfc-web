@@ -29,7 +29,7 @@ export const AboutSection = () => {
                     </div>
 
                     {/* Content Column */}
-                    <div className="animate-fade-in-right space-y-8">
+                    <div className="animate-fade-in-right space-y-6">
 
                         <div>
                             <span className="text-sm font-bold tracking-[0.2em] uppercase text-gray-400 mb-4 block font-oswald">
@@ -56,7 +56,7 @@ export const AboutSection = () => {
 
 
                         {/* CTA Button */}
-                        <div className="pt-4">
+                        <div>
                             <Link
                                 to="/equipo"
                                 className="inline-flex items-center gap-2 text-black font-oswald font-bold text-sm uppercase tracking-[0.2em] border-b-2 border-black pb-1 hover:text-gray-600 hover:border-gray-600 transition-colors"
