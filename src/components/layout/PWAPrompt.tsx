@@ -8,7 +8,7 @@ export const PWAPrompt = () => {
     if (location.pathname === '/instalar-app') return null;
 
     return (
-        <div id="pwa-install-prompt" className="md:hidden bg-gray-50 border-t border-gray-200 py-6 px-6 text-center text-black -mt-8 relative z-10">
+        <div id="pwa-install-prompt" className="md:hidden bg-gray-50 border-t border-gray-200 py-6 px-6 text-center text-black -mt-4 relative z-10">
             <h3 className="text-xl font-oswald font-bold uppercase mb-2 leading-tight">
                 Instala App
             </h3>
