@@ -15,10 +15,10 @@ export const AboutSection = () => {
                     </h2>
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20">
+                <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-16">
 
                     {/* Image Column */}
-                    <div className="relative group animate-fade-in-left h-full">
+                    <div className="relative group animate-fade-in-left h-full lg:col-span-2">
                         <div className="aspect-[4/5] lg:aspect-auto lg:h-full overflow-hidden bg-gray-100">
                             <img
                                 src="/ft-nosotros-tfc.jpg"
@@ -29,7 +29,7 @@ export const AboutSection = () => {
                     </div>
 
                     {/* Content Column */}
-                    <div className="animate-fade-in-right space-y-6 flex flex-col justify-center">
+                    <div className="animate-fade-in-right space-y-6 flex flex-col justify-center lg:col-span-3">
 
                         <div>
                             <span className="text-sm font-bold tracking-[0.2em] uppercase text-gray-400 mb-4 block font-oswald">
