@@ -53,17 +53,7 @@ export const AboutSection = () => {
                             </p>
                         </div>
 
-                        {/* Stats */}
-                        <div className="grid grid-cols-2 gap-8 border-t border-gray-200 pt-8 mt-8">
-                            <div>
-                                <span className="block text-3xl md:text-5xl font-oswald font-bold text-black mb-1">10+</span>
-                                <span className="text-xs uppercase tracking-widest text-gray-500 font-oswald">Años de Maestría</span>
-                            </div>
-                            <div>
-                                <span className="block text-3xl md:text-5xl font-oswald font-bold text-black mb-1">5k+</span>
-                                <span className="text-xs uppercase tracking-widest text-gray-500 font-oswald">Estilos Creados</span>
-                            </div>
-                        </div>
+
 
                         {/* CTA Button */}
                         <div className="pt-4">
