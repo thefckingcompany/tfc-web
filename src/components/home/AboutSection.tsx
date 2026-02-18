@@ -18,7 +18,7 @@ export const AboutSection = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20 items-center">
 
                     {/* Image Column */}
-                    <div className="relative group animate-fade-in-left">
+                    <div className="relative group animate-fade-in-left lg:max-w-md lg:mx-auto">
                         <div className="aspect-[4/5] overflow-hidden bg-gray-100">
                             <img
                                 src="/ft-nosotros-tfc.jpg"
