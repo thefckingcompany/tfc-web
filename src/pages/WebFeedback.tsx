@@ -20,9 +20,9 @@ const WebFeedback = () => {
     };
 
     return (
-        <div className="min-h-screen bg-white text-black pt-32 pb-20 px-6 font-sans">
+        <div className="min-h-screen bg-white text-black pt-8 pb-8 px-6 font-sans">
             <div className="max-w-md mx-auto">
-                <Link to="/" className="inline-flex items-center text-xs font-bold uppercase tracking-widest mb-12 text-gray-500 hover:text-black transition-colors">
+                <Link to="/" className="inline-flex items-center text-xs font-bold uppercase tracking-widest mb-6 text-gray-500 hover:text-black transition-colors">
                     <ArrowLeft className="mr-2" size={14} /> Volver al inicio
                 </Link>
 
@@ -30,7 +30,7 @@ const WebFeedback = () => {
                     Mejorar la Web
                 </h1>
 
-                <p className="text-gray-600 text-sm mb-12 leading-relaxed max-w-sm">
+                <p className="text-gray-600 text-sm mb-6 leading-relaxed max-w-sm">
                     Ayúdanos a mejorar. Si has encontrado un error o tienes una idea para la web, cuéntanoslo. Este formulario es 100% anónimo.
                 </p>
 
