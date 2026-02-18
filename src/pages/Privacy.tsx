@@ -103,12 +103,12 @@ const Privacy = () => {
                         </p>
                     </section>
 
-                    <div className="text-center my-px pt-0 pb-1">
-                        <Link to="/" className="inline-block px-8 py-3 bg-black text-white font-oswald font-bold uppercase tracking-widest text-xs hover:bg-gray-800 transition-colors">
-                            Volver al Inicio
-                        </Link>
-                    </div>
+                </div>
 
+                <div className="text-center mt-4 pb-12">
+                    <Link to="/" className="inline-block px-8 py-3 bg-black text-white font-oswald font-bold uppercase tracking-widest text-xs hover:bg-gray-800 transition-colors">
+                        Volver al Inicio
+                    </Link>
                 </div>
             </div>
         </div>
