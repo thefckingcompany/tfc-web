@@ -226,6 +226,11 @@ body .cky-revisit-bottom-left .cky-revisit-btn svg {
     bottom: calc(10rem + env(safe-area-inset-bottom)) !important;
   }
 
+  /* Hide PWA Install prompt when already installed */
+  #pwa-install-prompt {
+    display: none !important;
+  }
+
   /* Add safe area padding to top navigation to avoid notch overlap */
   nav {
     padding-top: env(safe-area-inset-top) !important;
