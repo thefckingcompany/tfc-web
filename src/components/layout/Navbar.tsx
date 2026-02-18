@@ -16,7 +16,7 @@ const navLinks = [
 export const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const location = useLocation();
-    const isHome = location.pathname === '/' || location.pathname === '/index.html';
+    const isHome = location.pathname === '/';
     const [scrolled, setScrolled] = useState(false);
 
     useEffect(() => {
@@ -24,6 +24,18 @@ export const Navbar = () => {
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
+
+    // Prevent scrolling when mobile menu is open
+    useEffect(() => {
+        if (isOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+        return () => {
+            document.body.style.overflow = '';
+        };
+    }, [isOpen]);
 
     // Determine text color based on background (Dark hero or White page headers)
     // Home starts transparent (on dark hero), becomes black on scroll
