@@ -159,7 +159,7 @@ export const Navbar = () => {
                                 key={link.name}
                                 to={link.path}
                                 onClick={() => setIsOpen(false)}
-                                className="text-2xl font-oswald font-bold tracking-widest text-white hover:text-gray-400 uppercase transition-colors"
+                                className="text-3xl font-oswald font-bold tracking-widest text-white hover:text-gray-400 uppercase transition-colors"
                             >
                                 {link.name}
                             </Link>
@@ -200,7 +200,7 @@ export const Navbar = () => {
                             </a>
                         </div>
 
-                        <div className="flex flex-col items-center gap-3 w-full px-8">
+                        <div className="flex flex-col items-center gap-6 mt-4 w-full px-8">
                             <Link
                                 to="/instalar-app"
                                 onClick={() => setIsOpen(false)}
@@ -211,7 +211,7 @@ export const Navbar = () => {
                             <Link
                                 to="/mejorar-web"
                                 onClick={() => setIsOpen(false)}
-                                className="w-full max-w-[200px] py-2 bg-white/5 border border-white/10 text-white text-center font-sans font-bold tracking-widest uppercase hover:bg-white/10 transition-colors text-[9px] flex items-center justify-center gap-2"
+                                className="w-auto text-white text-center font-sans font-bold tracking-widest uppercase hover:text-gray-300 transition-colors text-[9px] flex items-center justify-center gap-2 whitespace-nowrap"
                             >
                                 <span className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span>
                                 ¿Algo falla o mejorarías en la web?
