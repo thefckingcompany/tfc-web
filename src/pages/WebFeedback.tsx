@@ -20,30 +20,30 @@ const WebFeedback = () => {
     };
 
     return (
-        <div className="min-h-screen bg-black text-white pt-32 pb-20 px-6 font-sans">
+        <div className="min-h-screen bg-white text-black pt-32 pb-20 px-6 font-sans">
             <div className="max-w-md mx-auto">
-                <Link to="/" className="inline-flex items-center text-xs font-bold uppercase tracking-widest mb-12 text-gray-400 hover:text-white transition-colors">
+                <Link to="/" className="inline-flex items-center text-xs font-bold uppercase tracking-widest mb-12 text-gray-500 hover:text-black transition-colors">
                     <ArrowLeft className="mr-2" size={14} /> Volver al inicio
                 </Link>
 
-                <h1 className="text-3xl md:text-4xl font-oswald font-bold uppercase mb-4 leading-none text-white">
+                <h1 className="text-3xl md:text-4xl font-oswald font-bold uppercase mb-4 leading-none text-black">
                     Mejorar la Web
                 </h1>
 
-                <p className="text-gray-400 text-sm mb-12 leading-relaxed max-w-sm">
+                <p className="text-gray-600 text-sm mb-12 leading-relaxed max-w-sm">
                     Ayúdanos a mejorar. Si has encontrado un error o tienes una idea para la web, cuéntanoslo. Este formulario es 100% anónimo.
                 </p>
 
                 {submitted ? (
-                    <div className="bg-white/10 border border-white/20 rounded-none p-8 text-center animate-fade-in">
-                        <div className="w-12 h-12 bg-white text-black rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div className="bg-gray-50 border border-gray-200 rounded-none p-8 text-center animate-fade-in">
+                        <div className="w-12 h-12 bg-black text-white rounded-full flex items-center justify-center mx-auto mb-4">
                             <MessageSquare size={24} />
                         </div>
                         <h3 className="text-xl font-oswald font-bold uppercase mb-2">¡Gracias!</h3>
-                        <p className="text-gray-400 text-sm">Tu comentario ha sido recibido. Trabajaremos en ello.</p>
+                        <p className="text-gray-600 text-sm">Tu comentario ha sido recibido. Trabajaremos en ello.</p>
                         <button
                             onClick={() => setSubmitted(false)}
-                            className="mt-6 text-xs font-bold uppercase tracking-widest underline hover:text-gray-300"
+                            className="mt-6 text-xs font-bold uppercase tracking-widest underline hover:text-gray-900"
                         >
                             Enviar otro mensaje
                         </button>
@@ -60,20 +60,20 @@ const WebFeedback = () => {
                                 value={message}
                                 onChange={(e) => setMessage(e.target.value)}
                                 placeholder="Describe el error o tu sugerencia aquí..."
-                                className="w-full bg-white/5 border border-white/10 text-white p-4 focus:outline-none focus:border-white/40 transition-colors text-sm placeholder:text-gray-600 rounded-none resize-none"
+                                className="w-full bg-gray-50 border border-gray-200 text-black p-4 focus:outline-none focus:border-black transition-colors text-sm placeholder:text-gray-400 rounded-none resize-none"
                                 required
                             ></textarea>
                         </div>
 
                         <button
                             type="submit"
-                            className="w-full bg-white text-black py-4 font-oswald font-bold uppercase tracking-widest text-sm hover:bg-gray-200 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                            className="w-full bg-black text-white py-4 font-oswald font-bold uppercase tracking-widest text-sm hover:bg-gray-800 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                             disabled={!message.trim()}
                         >
                             Enviar Comentario
                         </button>
 
-                        <p className="text-[10px] text-gray-600 text-center uppercase tracking-widest mt-4">
+                        <p className="text-[10px] text-gray-400 text-center uppercase tracking-widest mt-4">
                             No guardamos ningún dato personal.
                         </p>
                     </form>
