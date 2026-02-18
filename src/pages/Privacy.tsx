@@ -8,7 +8,7 @@ const Privacy = () => {
     }, []);
 
     return (
-        <div className="bg-white text-black min-h-screen pt-10 pb-20 font-sans">
+        <div className="bg-white text-black min-h-screen pt-10 pb-4 font-sans">
             <div className="max-w-3xl mx-auto px-6 lg:px-8">
                 {/* Back Button */}
                 <Link
