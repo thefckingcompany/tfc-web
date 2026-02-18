@@ -3,7 +3,7 @@ import { ChevronDown } from 'lucide-react';
 
 export const Hero = () => {
     return (
-        <div className="relative h-[110vh] flex items-center justify-center overflow-hidden bg-black">
+        <div className="relative h-[110vh] md:h-screen flex items-center justify-center overflow-hidden bg-black">
             {/* Background with Overlay */}
             <div className="absolute inset-0 z-0">
                 <img
@@ -54,7 +54,7 @@ export const Hero = () => {
             </div>
 
             {/* Scroll Indicator */}
-            <div id="pwa-scroll-indicator" className="absolute bottom-40 left-1/2 transform -translate-x-1/2 text-white animate-bounce opacity-50 flex flex-col items-center z-20">
+            <div id="pwa-scroll-indicator" className="absolute bottom-40 md:bottom-10 left-1/2 transform -translate-x-1/2 text-white animate-bounce opacity-50 flex flex-col items-center z-20">
                 <span className="text-xs uppercase tracking-widest">Scroll</span>
                 <ChevronDown className="mt-2" size={24} />
             </div>
