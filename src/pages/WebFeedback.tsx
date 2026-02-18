@@ -15,9 +15,9 @@ const WebFeedback = () => {
         setIsSending(true);
 
         // Detectar plataforma
-        // const isPWA = window.matchMedia('(display-mode: standalone)').matches || (window.navigator as any).standalone;
-        // const platform = isPWA ? 'PWA' : 'Web';
-        // const userAgent = navigator.userAgent;
+        const isPWA = window.matchMedia('(display-mode: standalone)').matches || (window.navigator as any).standalone;
+        const platform = isPWA ? 'PWA' : 'Web';
+        const userAgent = navigator.userAgent;
 
         try {
             await fetch(N8N_WEBHOOK_URL, {
@@ -27,8 +27,8 @@ const WebFeedback = () => {
                 },
                 body: JSON.stringify({
                     message,
-                    // platform,
-                    // userAgent,
+                    platform,
+                    userAgent,
                     timestamp: new Date().toISOString(),
                 }),
             });
