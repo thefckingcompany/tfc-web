@@ -87,7 +87,7 @@ const Legal = () => {
                         </p>
                     </section>
 
-                    <div className="text-center mt-4 mb-4">
+                    <div className="text-center mt-1 mb-1">
                         <Link to="/" className="inline-block px-8 py-3 bg-black text-white font-oswald font-bold uppercase tracking-widest text-xs hover:bg-gray-800 transition-colors">
                             Volver al Inicio
                         </Link>
