@@ -9,7 +9,7 @@ const InstallPWA = () => {
                     <ArrowLeft className="mr-2" size={16} /> Volver
                 </Link>
 
-                <h1 className="text-3xl font-oswald font-bold uppercase mb-6 leading-none">
+                <h1 className="text-3xl font-oswald font-bold uppercase mb-6 leading-tight">
                     Instala la App <br /><span className="text-gray-400">En tu móvil</span>
                 </h1>
 
