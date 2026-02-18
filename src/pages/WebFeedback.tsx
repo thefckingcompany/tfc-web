@@ -8,16 +8,16 @@ const WebFeedback = () => {
     const [isSending, setIsSending] = useState(false);
 
     // TODO: Reemplaza esta URL con la URL de tu Webhook de producción de n8n
-    const N8N_WEBHOOK_URL = 'https://YOUR_N8N_INSTANCE/webhook/feedback';
+    const N8N_WEBHOOK_URL = 'https://n8n.srv1263947.hstgr.cloud/webhook/feedback-web';
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setIsSending(true);
 
         // Detectar plataforma
-        const isPWA = window.matchMedia('(display-mode: standalone)').matches || (window.navigator as any).standalone;
-        const platform = isPWA ? 'PWA' : 'Web';
-        const userAgent = navigator.userAgent;
+        // const isPWA = window.matchMedia('(display-mode: standalone)').matches || (window.navigator as any).standalone;
+        // const platform = isPWA ? 'PWA' : 'Web';
+        // const userAgent = navigator.userAgent;
 
         try {
             await fetch(N8N_WEBHOOK_URL, {
@@ -27,8 +27,8 @@ const WebFeedback = () => {
                 },
                 body: JSON.stringify({
                     message,
-                    platform,
-                    userAgent,
+                    // platform,
+                    // userAgent,
                     timestamp: new Date().toISOString(),
                 }),
             });
