@@ -20,7 +20,7 @@ const WebFeedback = () => {
     };
 
     return (
-        <div className="min-h-screen bg-white text-black pt-8 pb-8 px-6 font-sans">
+        <div className="bg-white text-black pt-8 pb-8 px-6 font-sans">
             <div className="max-w-md mx-auto">
                 <Link to="/" className="inline-flex items-center text-xs font-bold uppercase tracking-widest mb-6 text-gray-500 hover:text-black transition-colors">
                     <ArrowLeft className="mr-2" size={14} /> Volver al inicio
