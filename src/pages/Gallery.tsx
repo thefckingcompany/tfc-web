@@ -14,7 +14,7 @@ const galleryImages = [
 
 const Gallery = () => {
     return (
-        <div className="container mx-auto px-6 py-12 min-h-screen animate-fade-in bg-white text-black">
+        <div className="container mx-auto px-6 pt-12 pb-8 min-h-screen animate-fade-in bg-white text-black">
 
             {/* Header */}
             <div className="text-center mb-8">
