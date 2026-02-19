@@ -304,7 +304,7 @@ export const Navbar = () => {
                                         className="text-white text-center font-sans font-bold tracking-widest uppercase hover:text-gray-300 transition-colors text-[9px] flex items-center justify-center gap-2 whitespace-nowrap"
                                     >
                                         <span className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span>
-                                        ¿Algo falla?
+                                        ¿Algo falla o mejorarías en la web?
                                     </Link>
                                 </motion.div>
                             </motion.div>
