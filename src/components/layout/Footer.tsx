@@ -19,7 +19,7 @@ export const Footer = () => {
                             </h2>
                         </div>
                         <p className="text-gray-500 text-xs leading-relaxed max-w-xs font-sans tracking-wide">
-                            PREMIUM GROOMING FOR THE MODERN GENTLEMAN. ESTABLISHED 2020.
+                            PREMIUM GROOMING FOR THE MODERN GENTLEMAN. DESDE 2020.
                         </p>
                         <div className="flex gap-4">
                             <a href="https://wa.me/34664194168" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-black transition-all">
@@ -123,11 +123,11 @@ export const Footer = () => {
 
                 <div className="flex flex-col md:flex-row justify-between items-center gap-4">
                     <p className="text-gray-700 text-[10px] text-center md:text-left uppercase tracking-widest font-sans">
-                        &copy; {new Date().getFullYear()} The Fucking Company. All Rights Reserved.
+                        &copy; {new Date().getFullYear()} The Fucking Company. TODOS LOS DERECHOS RESERVADOS.
                     </p>
                     <div className="flex flex-wrap justify-center gap-6">
-                        <Link to="/privacidad" className="text-gray-700 hover:text-gray-400 text-[10px] uppercase tracking-widest transition-colors font-sans">Privacy</Link>
-                        <Link to="/legal" className="text-gray-700 hover:text-gray-400 text-[10px] uppercase tracking-widest transition-colors font-sans">Terms</Link>
+                        <Link to="/privacidad" className="text-gray-700 hover:text-gray-400 text-[10px] uppercase tracking-widest transition-colors font-sans">POLÍTICA DE PRIVACIDAD</Link>
+                        <Link to="/legal" className="text-gray-700 hover:text-gray-400 text-[10px] uppercase tracking-widest transition-colors font-sans">TÉRMINOS Y CONDICIONES</Link>
                     </div>
                 </div>
             </div>
