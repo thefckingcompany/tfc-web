@@ -155,7 +155,7 @@ export const Navbar = () => {
                             initial={{ opacity: 0, clipPath: "circle(0% at 100% 0%)" }}
                             animate={{ opacity: 1, clipPath: "circle(150% at 100% 0%)" }}
                             exit={{ opacity: 0, clipPath: "circle(0% at 100% 0%)" }}
-                            transition={{ duration: 0.4, ease: "easeInOut" }}
+                            transition={{ duration: 0.3, ease: [0.33, 1, 0.68, 1] }}
                             style={{ backgroundColor: '#000000' }}
                             className="md:hidden fixed top-0 left-0 w-full h-full z-[9999] text-white flex flex-col overscroll-none"
                         >
@@ -208,10 +208,10 @@ export const Navbar = () => {
                                 exit="closed"
                                 variants={{
                                     open: {
-                                        transition: { staggerChildren: 0.05, delayChildren: 0.1 }
+                                        transition: { staggerChildren: 0.03, delayChildren: 0.05 }
                                     },
                                     closed: {
-                                        transition: { staggerChildren: 0.05, staggerDirection: -1 }
+                                        transition: { staggerChildren: 0.03, staggerDirection: -1 }
                                     }
                                 }}
                             >
