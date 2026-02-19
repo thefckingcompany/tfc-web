@@ -126,8 +126,8 @@ export const Footer = () => {
                         &copy; {new Date().getFullYear()} The Fucking Company. TODOS LOS DERECHOS RESERVADOS.
                     </p>
                     <div className="flex flex-wrap justify-center gap-6">
-                        <Link to="/privacidad" className="text-gray-700 hover:text-gray-400 text-[10px] uppercase tracking-widest transition-colors font-sans">POLÍTICA DE PRIVACIDAD</Link>
-                        <Link to="/legal" className="text-gray-700 hover:text-gray-400 text-[10px] uppercase tracking-widest transition-colors font-sans">TÉRMINOS Y CONDICIONES</Link>
+                        <Link to="/privacidad" className="text-gray-700 hover:text-gray-400 text-[8px] uppercase tracking-widest transition-colors font-sans">POLÍTICA DE PRIVACIDAD</Link>
+                        <Link to="/legal" className="text-gray-700 hover:text-gray-400 text-[8px] uppercase tracking-widest transition-colors font-sans">TÉRMINOS Y CONDICIONES</Link>
                     </div>
                 </div>
             </div>
