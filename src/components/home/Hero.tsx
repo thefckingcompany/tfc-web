@@ -33,7 +33,7 @@ export const Hero = () => {
 
                 {/* Tagline */}
                 <p className="text-xs md:text-base text-gray-300 font-sans tracking-[0.3em] uppercase mb-12 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-                    Barbería profesional. Citas sin esperas.
+                    Barbería profesional. <br className="md:hidden" />Citas sin esperas.
                 </p>
 
                 {/* Buttons */}
