@@ -58,10 +58,10 @@ export const AboutSection = () => {
                         {/* CTA Button */}
                         <div>
                             <Link
-                                to="/equipo"
+                                to="/galeria"
                                 className="inline-flex items-center gap-2 text-black font-oswald font-bold text-sm uppercase tracking-[0.2em] border-b-2 border-black pb-1 hover:text-gray-600 hover:border-gray-600 transition-colors"
                             >
-                                Conocer al Equipo
+                                Ver Galería
                                 <ArrowRight size={16} />
                             </Link>
                         </div>
