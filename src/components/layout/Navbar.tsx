@@ -157,7 +157,7 @@ export const Navbar = () => {
                             exit={{ opacity: 0, clipPath: "circle(0% at 100% 0%)" }}
                             transition={{ duration: 0.3, ease: [0.33, 1, 0.68, 1] }}
                             style={{ backgroundColor: '#000000' }}
-                            className="md:hidden fixed top-0 left-0 w-full h-full z-[9999] text-white flex flex-col overscroll-none"
+                            className="md:hidden fixed top-0 left-0 w-full h-[100dvh] z-[9999] text-white flex flex-col overscroll-none"
                         >
 
                             {/* Top Bar: Logo & Close Button - Replicating Navbar structure exactly */}
@@ -202,7 +202,7 @@ export const Navbar = () => {
 
                             {/* Navigation Links */}
                             <motion.div
-                                className={`flex-grow flex flex-col items-center space-y-4 overflow-y-auto ${isPWA ? 'justify-center relative' : 'justify-end pb-8'}`}
+                                className={`flex-grow flex flex-col items-center space-y-4 overflow-y-auto ${isPWA ? 'justify-center relative' : 'justify-center py-8'}`}
                                 initial="closed"
                                 animate="open"
                                 exit="closed"
