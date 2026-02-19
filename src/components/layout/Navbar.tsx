@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Instagram, Phone } from 'lucide-react';
+import { AnimatePresence, motion } from 'framer-motion';
 import { WhatsAppIcon } from '../../icons/WhatsAppIcon';
 
 const navLinks = [
@@ -103,7 +104,7 @@ export const Navbar = () => {
                         ))}
                         <Link
                             to="/reservar"
-                            className={`px-6 py-3 font-oswald font-bold tracking-wider uppercase text-sm transition-colors ${buttonClass}`}
+                            className={`px-6 py-3 font-oswald font-bold tracking-wider uppercase text-sm transition-colors btn-premium ${buttonClass}`}
                         >
                             Reservar
                         </Link>
@@ -116,126 +117,199 @@ export const Navbar = () => {
                             className={`${textColorClass} hover:opacity-70 transition-colors p-2 -mr-2`}
                             aria-label="Menu"
                         >
-                            {isOpen ? <X size={28} /> : <Menu size={28} />}
+                            <div className="relative w-7 h-7 flex items-center justify-center">
+                                <AnimatePresence mode="wait" initial={false}>
+                                    {isOpen ? (
+                                        <motion.div
+                                            key="close"
+                                            initial={{ rotate: -90, opacity: 0 }}
+                                            animate={{ rotate: 0, opacity: 1 }}
+                                            exit={{ rotate: 90, opacity: 0 }}
+                                            transition={{ duration: 0.2 }}
+                                        >
+                                            <X size={28} />
+                                        </motion.div>
+                                    ) : (
+                                        <motion.div
+                                            key="menu"
+                                            initial={{ rotate: 90, opacity: 0 }}
+                                            animate={{ rotate: 0, opacity: 1 }}
+                                            exit={{ rotate: -90, opacity: 0 }}
+                                            transition={{ duration: 0.2 }}
+                                        >
+                                            <Menu size={28} />
+                                        </motion.div>
+                                    )}
+                                </AnimatePresence>
+                            </div>
                         </button>
                     </div>
                 </div>
             </div>
 
             {/* Mobile Dropdown Overlay - Rendered in Portal to escape parent stacking context (backdrop-filter) */}
-            {isOpen && createPortal(
-                <div
-                    style={{ backgroundColor: '#000000' }}
-                    className="md:hidden fixed top-0 left-0 w-full h-full z-[9999] text-white flex flex-col overscroll-none animate-in fade-in duration-200"
-                >
+            {createPortal(
+                <AnimatePresence>
+                    {isOpen && (
+                        <motion.div
+                            initial={{ opacity: 0, clipPath: "circle(0% at 100% 0%)" }}
+                            animate={{ opacity: 1, clipPath: "circle(150% at 100% 0%)" }}
+                            exit={{ opacity: 0, clipPath: "circle(0% at 100% 0%)" }}
+                            transition={{ duration: 0.4, ease: "easeInOut" }}
+                            style={{ backgroundColor: '#000000' }}
+                            className="md:hidden fixed top-0 left-0 w-full h-full z-[9999] text-white flex flex-col overscroll-none"
+                        >
 
-                    {/* Top Bar: Logo & Close Button - Replicating Navbar structure exactly */}
-                    <div className="w-full border-b border-white/10 shrink-0">
-                        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                            <div className="flex items-center justify-between h-24">
-                                {/* Logo */}
-                                <Link
-                                    to="/"
-                                    className="flex flex-col items-center"
-                                    onClick={(e) => {
-                                        setIsOpen(false);
-                                        handleLogoClick(e);
-                                    }}
-                                >
-                                    <span className="text-2xl font-oswald font-bold tracking-tighter uppercase leading-none text-white">
-                                        The Fucking
-                                    </span>
-                                    <span className="text-lg font-oswald uppercase tracking-[0.3em] leading-none opacity-80 text-white">
-                                        Company
-                                    </span>
-                                </Link>
+                            {/* Top Bar: Logo & Close Button - Replicating Navbar structure exactly */}
+                            <div className="w-full border-b border-white/10 shrink-0">
+                                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                                    <div className="flex items-center justify-between h-24">
+                                        {/* Logo */}
+                                        <Link
+                                            to="/"
+                                            className="flex flex-col items-center"
+                                            onClick={(e) => {
+                                                setIsOpen(false);
+                                                handleLogoClick(e);
+                                            }}
+                                        >
+                                            <span className="text-2xl font-oswald font-bold tracking-tighter uppercase leading-none text-white">
+                                                The Fucking
+                                            </span>
+                                            <span className="text-lg font-oswald uppercase tracking-[0.3em] leading-none opacity-80 text-white">
+                                                Company
+                                            </span>
+                                        </Link>
 
-                                {/* Close Button */}
-                                <div>
-                                    <button
-                                        onClick={() => setIsOpen(false)}
-                                        className="text-white hover:opacity-70 transition-colors p-2 -mr-2"
-                                        aria-label="Cerrar menú"
-                                    >
-                                        <X size={28} />
-                                    </button>
+                                        {/* Close Button - functionality is handled by the main toggle, but kept for layout consistency if needed, though hidden usually or same pos */}
+                                        <div>
+                                            <button
+                                                onClick={() => setIsOpen(false)}
+                                                className="text-white hover:opacity-70 transition-colors p-2 -mr-2"
+                                                aria-label="Cerrar menú"
+                                            >
+                                                <motion.div
+                                                    whileHover={{ rotate: 90 }}
+                                                    transition={{ duration: 0.2 }}
+                                                >
+                                                    <X size={28} />
+                                                </motion.div>
+                                            </button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
 
-                    {/* Navigation Links */}
-                    <div className={`flex-grow flex flex-col items-center space-y-4 overflow-y-auto ${isPWA ? 'justify-center relative' : 'justify-end pb-8'}`}>
-                        {navLinks.map((link) => (
-                            <Link
-                                key={link.name}
-                                to={link.path}
-                                onClick={() => setIsOpen(false)}
-                                className="text-3xl font-oswald font-bold tracking-widest text-white hover:text-gray-400 uppercase transition-colors"
+                            {/* Navigation Links */}
+                            <motion.div
+                                className={`flex-grow flex flex-col items-center space-y-4 overflow-y-auto ${isPWA ? 'justify-center relative' : 'justify-end pb-8'}`}
+                                initial="closed"
+                                animate="open"
+                                exit="closed"
+                                variants={{
+                                    open: {
+                                        transition: { staggerChildren: 0.05, delayChildren: 0.1 }
+                                    },
+                                    closed: {
+                                        transition: { staggerChildren: 0.05, staggerDirection: -1 }
+                                    }
+                                }}
                             >
-                                {link.name}
-                            </Link>
-                        ))}
+                                {navLinks.map((link) => (
+                                    <motion.div
+                                        key={link.name}
+                                        variants={{
+                                            open: { opacity: 1, y: 0 },
+                                            closed: { opacity: 0, y: 20 }
+                                        }}
+                                    >
+                                        <Link
+                                            to={link.path}
+                                            onClick={() => setIsOpen(false)}
+                                            className="text-3xl font-oswald font-bold tracking-widest text-white hover:text-gray-400 uppercase transition-colors block p-2"
+                                        >
+                                            {link.name}
+                                        </Link>
+                                    </motion.div>
+                                ))}
 
-                        {/* Social Media Icons moved here */}
-                        <Link
-                            to="/reservar"
-                            onClick={() => setIsOpen(false)}
-                            className="mt-6 px-12 py-4 bg-white text-black font-oswald font-bold tracking-widest uppercase hover:bg-gray-200 transition-colors"
-                        >
-                            Reservar Cita
-                        </Link>
-
-                        {/* Social Media Icons moved here */}
-                        <div className="flex justify-center gap-8 py-6">
-                            <a
-                                href="https://wa.me/34664194168"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-white hover:text-green-400 transition-colors"
-                            >
-                                <WhatsAppIcon size={32} />
-                            </a>
-                            <a
-                                href="https://www.instagram.com/thefucking.company/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-white hover:text-pink-400 transition-colors"
-                            >
-                                <Instagram size={32} />
-                            </a>
-                            <a
-                                href="tel:+34664194168"
-                                className="text-white hover:text-blue-400 transition-colors"
-                            >
-                                <Phone size={32} />
-                            </a>
-                        </div>
-
-                        <div className={`flex flex-col items-center gap-6 w-full px-8 ${isPWA ? 'absolute bottom-8' : 'mt-0'}`}>
-                            {!isPWA && (
-                                <Link
-                                    to="/instalar-app"
-                                    onClick={() => setIsOpen(false)}
-                                    className="w-full max-w-[200px] py-3 border border-white/30 text-white text-center font-oswald font-bold tracking-widest uppercase hover:bg-white/10 transition-colors text-xs"
+                                <motion.div
+                                    variants={{
+                                        open: { opacity: 1, y: 0 },
+                                        closed: { opacity: 0, y: 20 }
+                                    }}
                                 >
-                                    Instala App
-                                </Link>
-                            )}
-                            <Link
-                                to="/mejorar-web"
-                                onClick={() => setIsOpen(false)}
-                                className="w-auto text-white text-center font-sans font-bold tracking-widest uppercase hover:text-gray-300 transition-colors text-[9px] flex items-center justify-center gap-2 whitespace-nowrap"
-                            >
-                                <span className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span>
-                                ¿Algo falla o mejorarías en la web?
-                            </Link>
-                        </div>
-                    </div>
+                                    <Link
+                                        to="/reservar"
+                                        onClick={() => setIsOpen(false)}
+                                        className="mt-6 px-12 py-4 bg-white text-black font-oswald font-bold tracking-widest uppercase hover:bg-gray-200 transition-colors inline-block"
+                                    >
+                                        Reservar Cita
+                                    </Link>
+                                </motion.div>
 
-                    {/* Social Media Footer */}
+                                {/* Social Media Icons moved here */}
+                                <motion.div
+                                    className="flex justify-center gap-8 py-6"
+                                    variants={{
+                                        open: { opacity: 1, y: 0 },
+                                        closed: { opacity: 0, y: 20 }
+                                    }}
+                                >
+                                    <a
+                                        href="https://wa.me/34664194168"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-white hover:text-green-400 transition-colors"
+                                    >
+                                        <WhatsAppIcon size={32} />
+                                    </a>
+                                    <a
+                                        href="https://www.instagram.com/thefucking.company/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-white hover:text-pink-400 transition-colors"
+                                    >
+                                        <Instagram size={32} />
+                                    </a>
+                                    <a
+                                        href="tel:+34664194168"
+                                        className="text-white hover:text-blue-400 transition-colors"
+                                    >
+                                        <Phone size={32} />
+                                    </a>
+                                </motion.div>
 
-                </div>,
+                                <motion.div
+                                    className={`flex flex-col items-center gap-6 w-full px-8 ${isPWA ? 'absolute bottom-8' : 'mt-0'}`}
+                                    variants={{
+                                        open: { opacity: 1, y: 0 },
+                                        closed: { opacity: 0, y: 20 }
+                                    }}
+                                >
+                                    {!isPWA && (
+                                        <Link
+                                            to="/instalar-app"
+                                            onClick={() => setIsOpen(false)}
+                                            className="w-full max-w-[200px] py-3 border border-white/30 text-white text-center font-oswald font-bold tracking-widest uppercase hover:bg-white/10 transition-colors text-xs"
+                                        >
+                                            Instala App
+                                        </Link>
+                                    )}
+                                    <Link
+                                        to="/mejorar-web"
+                                        onClick={() => setIsOpen(false)}
+                                        className="w-auto text-white text-center font-sans font-bold tracking-widest uppercase hover:text-gray-300 transition-colors text-[9px] flex items-center justify-center gap-2 whitespace-nowrap"
+                                    >
+                                        <span className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span>
+                                        ¿Algo falla o mejorarías en la web?
+                                    </Link>
+                                </motion.div>
+                            </motion.div>
+
+                        </motion.div>
+                    )}
+                </AnimatePresence>,
                 document.body
             )
             }

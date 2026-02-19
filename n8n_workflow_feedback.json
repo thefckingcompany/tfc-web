@@ -1,0 +1,72 @@
+{
+    "name": "TFC Web Feedback Collector",
+    "nodes": [
+        {
+            "parameters": {
+                "httpMethod": "POST",
+                "path": "feedback-web",
+                "authentication": "none",
+                "options": {}
+            },
+            "type": "n8n-nodes-base.webhook",
+            "typeVersion": 2,
+            "position": [
+                0,
+                0
+            ],
+            "id": "webhook-trigger",
+            "name": "Webhook (POST /feedback-web)"
+        },
+        {
+            "parameters": {
+                "operation": "append",
+                "documentId": {
+                    "__rl": true,
+                    "value": "TU_ID_DE_GOOGLE_SHEET_AQUI",
+                    "mode": "string"
+                },
+                "sheetName": {
+                    "__rl": true,
+                    "value": "Hoja 1",
+                    "mode": "string"
+                },
+                "columns": {
+                    "mappingMode": "defineBelow",
+                    "value": {
+                        "Mensaje": "={{ $json.body.message }}",
+                        "Plataforma": "={{ $json.body.platform }}",
+                        "UserAgent": "={{ $json.body.userAgent }}",
+                        "Fecha": "={{ $json.body.timestamp }}"
+                    },
+                    "matchingColumns": [],
+                    "schema": []
+                },
+                "options": {}
+            },
+            "type": "n8n-nodes-base.googleSheets",
+            "typeVersion": 4.5,
+            "position": [
+                220,
+                0
+            ],
+            "id": "google-sheets-node",
+            "name": "Guardar en Sheets"
+        }
+    ],
+    "connections": {
+        "Webhook (POST /feedback-web)": {
+            "main": [
+                [
+                    {
+                        "node": "Guardar en Sheets",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        }
+    },
+    "settings": {
+        "executionOrder": "v1"
+    }
+}

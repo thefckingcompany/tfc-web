@@ -7,7 +7,7 @@ import { AboutSection } from '../components/home/AboutSection';
 
 const Home = () => {
     return (
-        <div className="animate-fade-in">
+        <div>
             <Hero />
             <ServicesTeaser />
             <TeamTeaser />

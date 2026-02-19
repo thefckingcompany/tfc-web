@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Instagram } from 'lucide-react';
+import { ScrollReveal } from '../components/ui/ScrollReveal';
 
 const team = [
     {
@@ -51,58 +52,62 @@ const team = [
 const Team = () => {
     return (
         <div className="min-h-screen bg-white text-black py-12 px-10 sm:px-8 lg:px-8">
-            <div className="text-center mb-7 pt-0">
-                <p className="font-script text-2xl text-gray-500 mb-2">El Talento</p>
-                <h1 className="text-3xl sm:text-4xl md:text-7xl font-oswald font-bold uppercase tracking-tighter mb-6">
-                    Conoce al Equipo
-                </h1>
-                <div className="w-16 h-[1px] bg-black mx-auto"></div>
-            </div>
+            <ScrollReveal width="100%">
+                <div className="text-center mb-7 pt-0">
+                    <p className="font-script text-2xl text-gray-500 mb-2">El Talento</p>
+                    <h1 className="text-3xl sm:text-4xl md:text-7xl font-oswald font-bold uppercase tracking-tighter mb-6">
+                        Conoce al Equipo
+                    </h1>
+                    <div className="w-16 h-[1px] bg-black mx-auto"></div>
+                </div>
+            </ScrollReveal>
 
             <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
-                {team.map((member) => (
-                    <div key={member.name} className="flex flex-col shadow-sm hover:shadow-xl transition-shadow duration-300">
-                        {/* Image */}
-                        <div className="h-64 sm:h-[500px] overflow-hidden relative">
-                            <img
-                                src={member.image}
-                                alt={member.name}
-                                className={`w-full h-full object-cover grayscale contrast-110 ${member.objectPosition}`}
-                            />
-                        </div>
-
-                        {/* Content */}
-                        <div className="p-8 bg-white border border-gray-100 flex-grow flex flex-col justify-between">
-                            <div>
-                                <h2 className="text-xl md:text-3xl font-oswald font-bold uppercase mb-1">{member.name}</h2>
-                                <h3 className="text-gray-500 font-sans text-xs uppercase tracking-[0.2em] mb-6">{member.role}</h3>
-                                <p className="text-gray-600 mb-6 leading-relaxed text-sm font-sans">
-                                    {member.bio}
-                                </p>
-
+                {team.map((member, index) => (
+                    <ScrollReveal key={member.name} width="100%" delay={index * 0.1}>
+                        <div className="flex flex-col shadow-sm card-premium transition-shadow duration-300 hover:shadow-xl">
+                            {/* Image */}
+                            <div className="h-64 sm:h-[500px] overflow-hidden relative">
+                                <img
+                                    src={member.image}
+                                    alt={member.name}
+                                    className={`w-full h-full object-cover grayscale contrast-110 ${member.objectPosition}`}
+                                />
                             </div>
 
-                            <div className="flex justify-between items-center pt-6 border-t border-gray-100">
-                                <div className="flex gap-4">
-                                    <a
-                                        href={member.instagram}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="flex items-center gap-2 text-gray-400 hover:text-black transition-colors group"
-                                    >
-                                        <Instagram size={18} />
-                                        <span className="text-xs font-sans tracking-wide group-hover:underline">{member.username}</span>
-                                    </a>
+                            {/* Content */}
+                            <div className="p-8 bg-white border border-gray-100 flex-grow flex flex-col justify-between">
+                                <div>
+                                    <h2 className="text-xl md:text-3xl font-oswald font-bold uppercase mb-1">{member.name}</h2>
+                                    <h3 className="text-gray-500 font-sans text-xs uppercase tracking-[0.2em] mb-6">{member.role}</h3>
+                                    <p className="text-gray-600 mb-6 leading-relaxed text-sm font-sans">
+                                        {member.bio}
+                                    </p>
+
                                 </div>
-                                <Link
-                                    to={`/reservar?barberId=${member.id}`}
-                                    className="px-6 py-2 border border-black text-black font-oswald font-bold uppercase tracking-wider hover:bg-black hover:text-white transition-all text-xs"
-                                >
-                                    Reservar Cita
-                                </Link>
+
+                                <div className="flex justify-between items-center pt-6 border-t border-gray-100">
+                                    <div className="flex gap-4">
+                                        <a
+                                            href={member.instagram}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="flex items-center gap-2 text-gray-400 hover:text-black transition-colors group"
+                                        >
+                                            <Instagram size={18} />
+                                            <span className="text-xs font-sans tracking-wide group-hover:underline">{member.username}</span>
+                                        </a>
+                                    </div>
+                                    <Link
+                                        to={`/reservar?barberId=${member.id}`}
+                                        className="px-6 py-2 border border-black text-black font-oswald font-bold uppercase tracking-wider hover:bg-black hover:text-white transition-all text-xs btn-premium"
+                                    >
+                                        Reservar Cita
+                                    </Link>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </ScrollReveal>
                 ))}
             </div>
         </div>

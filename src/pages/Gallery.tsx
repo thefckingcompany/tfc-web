@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { ScrollReveal } from '../components/ui/ScrollReveal';
 // List of gallery images
 const galleryImages = [
     { src: '/gallery/IMG_2403.jpg', alt: 'Corte de pelo moderno' },
@@ -14,47 +15,51 @@ const galleryImages = [
 
 const Gallery = () => {
     return (
-        <div className="container mx-auto px-6 pt-12 pb-8 min-h-screen animate-fade-in bg-white text-black">
+        <div className="container mx-auto px-6 pt-12 pb-8 min-h-screen bg-white text-black">
 
             {/* Header */}
-            <div className="text-center mb-8">
-                <h2 className="text-4xl md:text-5xl lg:text-6xl font-script text-gray-400 mb-2">Nuestro Trabajo</h2>
-                <h1 className="text-5xl md:text-7xl lg:text-8xl font-oswald font-bold uppercase tracking-tighter leading-none">
-                    GALERÍA
-                </h1>
-                <p className="mt-6 text-lg text-gray-500 font-sans max-w-2xl mx-auto uppercase tracking-wider">
-                    Una muestra de nuestro arte y pasión por el estilo masculino.
-                </p>
-            </div>
+            <ScrollReveal width="100%">
+                <div className="text-center mb-8">
+                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-script text-gray-400 mb-2">Nuestro Trabajo</h2>
+                    <h1 className="text-5xl md:text-7xl lg:text-8xl font-oswald font-bold uppercase tracking-tighter leading-none">
+                        GALERÍA
+                    </h1>
+                    <p className="mt-6 text-lg text-gray-500 font-sans max-w-2xl mx-auto uppercase tracking-wider">
+                        Una muestra de nuestro arte y pasión por el estilo masculino.
+                    </p>
+                </div>
+            </ScrollReveal>
 
             {/* Gallery Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {galleryImages.map((image, index) => (
-                    <div
-                        key={index}
-                        className="group relative overflow-hidden aspect-square rounded-sm bg-gray-100 shadow-lg cursor-pointer transition-transform hover:-translate-y-2 duration-500"
-                    >
-                        <img
-                            src={image.src}
-                            alt={image.alt}
-                            className="object-cover w-full h-full transition-transform duration-700 ease-in-out group-hover:scale-110 grayscale group-hover:grayscale-0"
-                            loading="lazy"
-                        />
-                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500 pointer-events-none"></div>
-                    </div>
+                    <ScrollReveal key={index} width="100%" delay={index * 0.05}>
+                        <div
+                            className="group relative overflow-hidden aspect-square rounded-sm bg-gray-100 shadow-lg cursor-pointer card-premium"
+                        >
+                            <img
+                                src={image.src}
+                                alt={image.alt}
+                                className="object-cover w-full h-full transition-transform duration-700 ease-in-out group-hover:scale-110 grayscale group-hover:grayscale-0"
+                                loading="lazy"
+                            />
+                            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500 pointer-events-none"></div>
+                        </div>
+                    </ScrollReveal>
                 ))}
             </div>
 
             {/* CTA Button */}
-            <div className="mt-8 text-center">
-                <Link
-                    to="/reservar"
-                    className="inline-block px-12 py-4 bg-black text-white font-oswald font-bold text-lg uppercase tracking-widest hover:bg-gray-900 transition-colors"
-                >
-                    Reservar Cita
-                </Link>
-            </div>
-
+            <ScrollReveal width="100%" delay={0.2}>
+                <div className="mt-8 text-center">
+                    <Link
+                        to="/reservar"
+                        className="inline-block px-12 py-4 bg-black text-white font-oswald font-bold text-lg uppercase tracking-widest hover:bg-gray-900 transition-colors btn-premium"
+                    >
+                        Reservar Cita
+                    </Link>
+                </div>
+            </ScrollReveal>
         </div>
     );
 };

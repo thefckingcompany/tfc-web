@@ -18,35 +18,35 @@ export const Hero = () => {
             <div className="relative z-10 text-center px-10 max-w-5xl mx-auto flex flex-col items-center">
 
                 {/* Main Title Stack */}
-                <h1 className="text-4xl sm:text-5xl md:text-8xl lg:text-9xl font-oswald font-bold text-white leading-none tracking-tighter mb-2 uppercase">
+                <h1 className="text-4xl sm:text-5xl md:text-8xl lg:text-9xl font-oswald font-bold text-white leading-none tracking-tighter mb-2 uppercase animate-fade-in-up">
                     The Fucking<br />
                     <span className="block mt-0 md:mt-[-10px]">Company</span>
                 </h1>
 
                 {/* Script Subtitle */}
-                <h2 className="text-2xl sm:text-3xl md:text-6xl font-script text-white mb-6 transform -rotate-2">
+                <h2 className="text-2xl sm:text-3xl md:text-6xl font-script text-white mb-6 transform -rotate-2 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
                     Barber Shop
                 </h2>
 
                 {/* Separator */}
-                <div className="w-24 h-[1px] bg-white/50 mb-8"></div>
+                <div className="w-24 h-[1px] bg-white/50 mb-8 animate-fade-in-up" style={{ animationDelay: '0.3s' }}></div>
 
                 {/* Tagline */}
-                <p className="text-xs md:text-base text-gray-300 font-sans tracking-[0.3em] uppercase mb-12">
+                <p className="text-xs md:text-base text-gray-300 font-sans tracking-[0.3em] uppercase mb-12 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
                     Barbería profesional. Citas sin esperas.
                 </p>
 
                 {/* Buttons */}
-                <div className="flex flex-col md:flex-row gap-6 justify-center items-center w-full md:w-auto">
+                <div className="flex flex-col md:flex-row gap-6 justify-center items-center w-full md:w-auto animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
                     <Link
                         to="/reservar"
-                        className="w-full md:w-auto px-10 py-4 bg-white text-black font-oswald font-bold text-sm uppercase tracking-[0.2em] hover:bg-gray-200 transition-colors"
+                        className="w-full md:w-auto px-10 py-4 bg-white text-black font-oswald font-bold text-sm uppercase tracking-[0.2em] hover:bg-gray-200 transition-colors btn-premium"
                     >
                         Reservar Cita
                     </Link>
                     <Link
                         to="/servicios"
-                        className="w-full md:w-auto px-10 py-4 border border-white text-white font-oswald font-bold text-sm uppercase tracking-[0.2em] hover:bg-white hover:text-black transition-colors"
+                        className="w-full md:w-auto px-10 py-4 border border-white text-white font-oswald font-bold text-sm uppercase tracking-[0.2em] hover:bg-white hover:text-black transition-colors btn-premium"
                     >
                         Ver Servicios
                     </Link>
