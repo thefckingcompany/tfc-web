@@ -1,4 +1,4 @@
-
+import { Link } from 'react-router-dom';
 // List of gallery images
 const galleryImages = [
     { src: '/gallery/IMG_2403.jpg', alt: 'Corte de pelo moderno' },
@@ -43,6 +43,16 @@ const Gallery = () => {
                         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500 pointer-events-none"></div>
                     </div>
                 ))}
+            </div>
+
+            {/* CTA Button */}
+            <div className="mt-16 text-center">
+                <Link
+                    to="/reservar"
+                    className="inline-block px-12 py-4 bg-black text-white font-oswald font-bold text-lg uppercase tracking-widest hover:bg-gray-900 transition-colors"
+                >
+                    Reservar Cita
+                </Link>
             </div>
 
         </div>
