@@ -12,9 +12,8 @@ export const ScrollReveal = ({ children, width = "fit-content", delay = 0, class
     return (
         <motion.div
             initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.1 }}
-            transition={{ duration: 0.25, delay, ease: [0.25, 1, 0.5, 1] }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay, ease: "easeOut" }}
             style={{ width }}
             className={`will-change-transform ${className}`}
         >
