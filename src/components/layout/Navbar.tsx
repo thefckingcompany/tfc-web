@@ -160,11 +160,11 @@ export const Navbar = () => {
                             className="md:hidden fixed top-0 left-0 w-full h-[100dvh] z-[9999] text-white flex flex-col overscroll-none"
                         >
 
-                            {/* Top Bar: Compact header for mobile menu */}
+                            {/* Top Bar: Original Size */}
                             <div className="w-full border-b border-white/10 shrink-0">
                                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                                    <div className="flex items-center justify-between h-16">
-                                        {/* Logo - Smaller for menu */}
+                                    <div className="flex items-center justify-between h-24">
+                                        {/* Logo */}
                                         <Link
                                             to="/"
                                             className="flex flex-col items-center"
@@ -173,10 +173,10 @@ export const Navbar = () => {
                                                 handleLogoClick(e);
                                             }}
                                         >
-                                            <span className="text-xl font-oswald font-bold tracking-tighter uppercase leading-none text-white">
+                                            <span className="text-2xl font-oswald font-bold tracking-tighter uppercase leading-none text-white">
                                                 The Fucking
                                             </span>
-                                            <span className="text-xs font-oswald uppercase tracking-[0.3em] leading-none opacity-80 text-white">
+                                            <span className="text-lg font-oswald uppercase tracking-[0.3em] leading-none opacity-80 text-white">
                                                 Company
                                             </span>
                                         </Link>
@@ -192,7 +192,7 @@ export const Navbar = () => {
                                                     whileHover={{ rotate: 90 }}
                                                     transition={{ duration: 0.2 }}
                                                 >
-                                                    <X size={24} />
+                                                    <X size={28} />
                                                 </motion.div>
                                             </button>
                                         </div>
@@ -200,9 +200,9 @@ export const Navbar = () => {
                                 </div>
                             </div>
 
-                            {/* Navigation Links - Centered & Compact */}
+                            {/* Navigation Links - RESTORED STYLE but with responsive flex spacing */}
                             <motion.div
-                                className="flex-grow flex flex-col items-center justify-center overflow-hidden"
+                                className="flex-grow flex flex-col items-center justify-evenly py-4 overflow-hidden"
                                 initial="closed"
                                 animate="open"
                                 exit="closed"
@@ -215,7 +215,7 @@ export const Navbar = () => {
                                     }
                                 }}
                             >
-                                <div className="flex flex-col items-center space-y-1">
+                                <div className="flex flex-col items-center space-y-2 sm:space-y-4">
                                     {navLinks.map((link) => (
                                         <motion.div
                                             key={link.name}
@@ -227,7 +227,7 @@ export const Navbar = () => {
                                             <Link
                                                 to={link.path}
                                                 onClick={() => setIsOpen(false)}
-                                                className="text-2xl font-oswald font-bold tracking-widest text-white hover:text-gray-400 uppercase transition-colors block py-1"
+                                                className="text-3xl sm:text-4xl font-oswald font-bold tracking-widest text-white hover:text-gray-400 uppercase transition-colors block p-1"
                                             >
                                                 {link.name}
                                             </Link>
@@ -244,7 +244,7 @@ export const Navbar = () => {
                                     <Link
                                         to="/reservar"
                                         onClick={() => setIsOpen(false)}
-                                        className="mt-4 px-8 py-3 bg-white text-black font-oswald font-bold tracking-widest uppercase hover:bg-gray-200 transition-colors inline-block text-sm"
+                                        className="px-10 py-3 sm:px-12 sm:py-4 bg-white text-black font-oswald font-bold tracking-widest uppercase hover:bg-gray-200 transition-colors inline-block text-sm sm:text-base"
                                     >
                                         Reservar Cita
                                     </Link>
@@ -252,7 +252,7 @@ export const Navbar = () => {
 
                                 {/* Social Media Icons */}
                                 <motion.div
-                                    className="flex justify-center gap-6 py-4"
+                                    className="flex justify-center gap-8"
                                     variants={{
                                         open: { opacity: 1, y: 0 },
                                         closed: { opacity: 0, y: 20 }
@@ -264,7 +264,7 @@ export const Navbar = () => {
                                         rel="noopener noreferrer"
                                         className="text-white hover:text-green-400 transition-colors"
                                     >
-                                        <WhatsAppIcon size={24} />
+                                        <WhatsAppIcon size={32} />
                                     </a>
                                     <a
                                         href="https://www.instagram.com/thefucking.company/"
@@ -272,18 +272,18 @@ export const Navbar = () => {
                                         rel="noopener noreferrer"
                                         className="text-white hover:text-pink-400 transition-colors"
                                     >
-                                        <Instagram size={24} />
+                                        <Instagram size={32} />
                                     </a>
                                     <a
                                         href="tel:+34664194168"
                                         className="text-white hover:text-blue-400 transition-colors"
                                     >
-                                        <Phone size={24} />
+                                        <Phone size={32} />
                                     </a>
                                 </motion.div>
 
                                 <motion.div
-                                    className="flex flex-col items-center gap-3 w-full"
+                                    className="flex flex-col items-center gap-4 w-full"
                                     variants={{
                                         open: { opacity: 1, y: 0 },
                                         closed: { opacity: 0, y: 20 }
@@ -293,7 +293,7 @@ export const Navbar = () => {
                                         <Link
                                             to="/instalar-app"
                                             onClick={() => setIsOpen(false)}
-                                            className="px-6 py-2 border border-white/30 text-white text-center font-oswald font-bold tracking-widest uppercase hover:bg-white/10 transition-colors text-[10px]"
+                                            className="w-full max-w-[200px] py-3 border border-white/30 text-white text-center font-oswald font-bold tracking-widest uppercase hover:bg-white/10 transition-colors text-xs"
                                         >
                                             Instala App
                                         </Link>
