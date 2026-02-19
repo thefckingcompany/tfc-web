@@ -11,10 +11,10 @@ interface ScrollRevealProps {
 export const ScrollReveal = ({ children, width = "fit-content", delay = 0, className = "" }: ScrollRevealProps) => {
     return (
         <motion.div
-            initial={{ opacity: 0, y: 10 }}
+            initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.1 }}
-            transition={{ duration: 0.35, delay, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.25, delay, ease: [0.25, 1, 0.5, 1] }}
             style={{ width }}
             className={`will-change-transform ${className}`}
         >
