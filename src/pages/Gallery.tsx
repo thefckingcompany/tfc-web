@@ -46,7 +46,7 @@ const Gallery = () => {
             </div>
 
             {/* CTA Button */}
-            <div className="mt-16 text-center">
+            <div className="mt-8 text-center">
                 <Link
                     to="/reservar"
                     className="inline-block px-12 py-4 bg-black text-white font-oswald font-bold text-lg uppercase tracking-widest hover:bg-gray-900 transition-colors"
